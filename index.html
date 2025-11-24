@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>劉宇寧誇誇團文案產生器 🌻</title>
+    <title>刘宇宁夸夸团文案生成器 🌻</title>
     <!-- 引入 Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入 Lucide Icons for aesthetic icons --><script type="module" src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
@@ -25,9 +25,9 @@
         /* AI Button Primary Style (Now using flat, cleaner design) */
         .btn-primary {
             transition: all 0.15s ease;
-            /* 移除自定義陰影，使用更乾淨的風格 */
+            /* 移除自定义阴影，使用更干净的风格 */
             background-color: #f97316; /* Orange-600 */
-            @apply rounded-xl shadow-none; /* 更簡潔的圓角和無陰影 */
+            @apply rounded-xl shadow-none; /* 更简洁的圆角和无阴影 */
         }
         .btn-primary:hover {
             transform: none; /* 移除 hover 提升效果 */
@@ -126,10 +126,10 @@
     <div class="container w-full max-w-4xl bg-white rounded-2xl shadow-xl border border-gray-100">
         <div class="header bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-t-2xl text-center">
             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-wide mb-2 flex items-center justify-center">
-                <i data-lucide="sun" class="w-7 h-7 mr-3"></i> 劉宇寧誇誇團文案產生器 🌻
+                <i data-lucide="sun" class="w-7 h-7 mr-3"></i> 刘宇宁夸夸团文案生成器 🌻
             </h1>
-            <p class="text-sm opacity-90">作者 by 小八寶粥 | 僅供摩飯使用｜有問題可聯絡 ig: md.8bao</p>
-            <p class="text-xs opacity-70 mt-1">版本號：v2.5 (2025.11.24 更新)</p>
+            <p class="text-sm opacity-90">作者 by 小八宝粥 | 仅供摩饭使用｜有问题可联络 ig: md.8bao</p>
+            <p class="text-xs opacity-70 mt-1">版本号：v5.2 (2025.11.24 更新 - 终极文案库)</p>
         </div>
 
         <div class="content p-6 sm:p-8">
@@ -137,54 +137,54 @@
             <!-- 1. 頂部獨立區塊：評論文案（含個人ID） - FULL WIDTH --><div class="section border-b pb-6 mb-6 border-orange-200">
                 <div class="section-title text-orange-600 mb-4">
                     <i data-lucide="message-square" class="w-5 h-5 text-orange-400"></i>
-                    評論文案（含個人ID）
+                    评论文案（含个人ID）
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="flex-grow">
                         <label for="personalIdInput" class="block mb-2 text-gray-600 text-sm font-semibold">
-                            輸入您的個人 ID (將自動附加到文末並轉為簡體字)：
+                            输入您的个人 ID (将自动附加到文末并转为简体字)：
                         </label>
-                        <input type="text" id="personalIdInput" value="寧的向日葵" 
+                        <input type="text" id="personalIdInput" value="宁的向日葵" 
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors" 
-                               placeholder="例如：摩飯 ID" oninput="saveSettings()">
+                               placeholder="例如：摩饭 ID" oninput="saveSettings()">
                     </div>
                 </div>
                 
                 <button class="btn w-full bg-orange-500 text-white hover:bg-orange-600 font-semibold mt-3 py-3 px-4 rounded-xl transition-colors" onclick="copyComment()">
                     <i data-lucide="copy" class="w-4 h-4 mr-2"></i>
-                    複製完整評論文案 (簡體)
+                    复制完整评论文案 (简体)
                 </button>
             </div>
 
             <!-- 2. 兩欄佈局：左側控制台 | 右側結果 --><div class="grid grid-cols-1 md:grid-cols-2 gap-8 content-grid-wrapper">
 
-                <!-- LEFT COLUMN: Settings & Generation Button (貼文控制台) --><div>
+                <!-- LEFT COLUMN: Settings & Generation Button (贴文控制台) --><div>
                     <!-- 2.1 貼文生成設置區塊 (風格/模板/影片/CR) --><div class="section mb-6">
                         <div class="section-title text-yellow-600 mb-4">
                             <i data-lucide="list-checks" class="w-5 h-5 text-yellow-400"></i>
-                            貼文內容設置 (AI 批次生成)
+                            贴文内容设置 (文案库批次生成)
                         </div>
 
                         <!-- NEW: 文案風格選擇 --><div class="mb-6">
                             <label for="styleSelect" class="block mb-2 text-gray-600 text-sm font-semibold">
-                                🎨 文案生成風格：
+                                🎨 文案生成风格：
                             </label>
                             <select id="styleSelect" class="w-full p-3 border border-yellow-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 appearance-none bg-white transition-colors">
-                                <option value="古風優雅" selected>古風優雅 (預設)</option>
-                                <option value="現代熱情">現代熱情 (粉絲向)</option>
+                                <option value="古风优雅" selected>古风优雅 (默认)</option>
+                                <option value="现代热情">现代热情 (粉丝向)</option>
                                 <option value="青春活力">青春活力 (清新)</option>
-                                <option value="詩意浪漫">詩意浪漫 (抒情)</option>
+                                <option value="诗意浪漫">诗意浪漫 (抒情)</option>
                             </select>
                         </div>
                         <!-- End NEW --><!-- 模板選擇 (Dropdown restored) --><div class="mb-3">
                             <label for="templateSelectDropdown" class="block mb-2 text-gray-600 text-sm font-semibold">
-                                選擇貼文模板 (Hashtag/提及/連結)：
+                                选择贴文模板 (Hashtag/提及/連结)：
                             </label>
                             <!-- 恢復下拉選單 --><select id="templateSelectDropdown" onchange="selectTemplateDropdown(this.value)" 
                                     class="w-full p-3 border border-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-500 transition-colors bg-white shadow-sm font-semibold">
-                                <!-- 模板選項，data-preview 包含摘要資訊 --><option value="1" data-preview="OLAY 代言, 2025巡演, 摩登兄弟超話 (含3連結)">模板 1 (OLAY/巡演)</option>
-                                <option value="2" data-preview="音樂緣計劃, 閒魚代言, 摩登兄弟超話 (含3連結)">模板 2 (音樂/閒魚)</option>
-                                <option value="3" data-preview="新歌榜單, 騰訊音樂由你榜, 摩登兄弟超話 (含3連結)">模板 3 (新歌/榜單)</option>
+                                <!-- 模板選項，data-preview 包含摘要資訊 --><option value="1" data-preview="OLAY 代言, 2025巡演, 摩登兄弟超話 (含3連结)">模板 1 (OLAY/巡演)</option>
+                                <option value="2" data-preview="音乐缘计划, 闲鱼代言, 摩登兄弟超话 (含3連结)">模板 2 (音乐/闲鱼)</option>
+                                <option value="3" data-preview="新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话 (含3連结)">模板 3 (新歌/榜单)</option>
                             </select>
                             
                             <!-- 模板內容預覽區塊 --><div id="templatePreviewSummary" class="text-sm mt-3 p-3 bg-yellow-100 text-yellow-800 rounded-lg border border-yellow-200 font-medium transition-opacity duration-300">
@@ -195,23 +195,23 @@
                             <input type="checkbox" id="crWatermarkCheckbox" 
                                    class="h-5 w-5 text-yellow-600 border-gray-300 rounded focus:ring-yellow-500" onchange="saveSettings()">
                             <label for="crWatermarkCheckbox" class="text-gray-700 select-none font-medium ml-2 text-sm">
-                                貼文底部添加「cr 見浮水印」
+                                贴文底部添加「cr 见浮水印」
                             </label>
                         </div>
 
                         <div class="grid grid-cols-1 gap-4 mt-6">
                             <!-- 影片連結選擇 (選填) --><div class="col-span-1">
                                 <label for="videoSelect" class="block mb-2 text-gray-600 text-sm font-semibold">
-                                    🎬 選填影片連結
+                                    🎬 选填影片连结
                                 </label>
                                 <select id="videoSelect" class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                                    <option value="" selected>❌ 無影片 (僅文案)</option>
-                                    <option value="RANDOM_ANY">🎲 隨機選擇一條影片 (每卡不同)</option>
-                                    <!-- 完整的預設視頻連結清單 --><optgroup label="━━━ 🆕 最新視頻 ━━━">
-                                        <option value="http://t.cn/AXLzjlVh">🔥🔥最新播放量1</option>
+                                    <option value="" selected>❌ 无影片 (仅文案)</option>
+                                    <option value="RANDOM_ANY">🎲 随机选择一条影片 (每卡不同)</option>
+                                    <!-- 完整的預設視頻連結清單 --><optgroup label="━━━ 🆕 最新视频 ━━━">
+                                        <option value="http://tcn/AXLzjlVh">🔥🔥最新播放量1</option>
                                         <option value="http://tcn/AXLz8d3b">🔥🔥最新播放量2</option>
-                                        <option value="http://tcn/AX2DHuN9">与寧一起做"真話擔當"</option>
-                                        <option value="http://tcn/AXAWueo2">刘宇宁碧浪品牌帶言了新福利</option>
+                                        <option value="http://tcn/AX2DHuN9">与宁一起做"真话担当"</option>
+                                        <option value="http://tcn/AXAWueo2">刘宇宁碧浪品牌带言了新福利</option>
                                         <option value="http://tcn/AX2Hav4j">🔥提高播放量1</option>
                                         <option value="http://tcn/AX2Y8IEM">🔥提高播放量2</option>
                                         <option value="http://tcn/AX2YM0pO">🔥提高播放量3</option>
@@ -243,131 +243,131 @@
                                         <option value="http://tcn/AXA0uua9">最新视频10</option>
                                         <option value="http://tcn/AXAIQHUw">刘宇宁送你大大大大福利</option>
                                         <option value="http://tcn/AXAG3KDo">刘宇宁的双11剧场</option>
-                                        <option value="http://tcn/AXAZ31CE">刘宇宁OLAY身体护理品牌全線代言人</option>
-                                        <option value="http://tcn/AXwpu3NZ">劉宇宁守护大家的暖绒绒時刻</option>
-                                        <option value="http://tcn/AXAZX3q4">劉宇宁点亮神奇灯牌</option>
+                                        <option value="http://tcn/AXAZ31CE">刘宇宁OLAY身体护理品牌全线代言人</option>
+                                        <option value="http://tcn/AXwpu3NZ">刘宇宁守护大家的暖绒绒时刻</option>
+                                        <option value="http://tcn/AXAZX3q4">刘宇宁点亮神奇灯牌</option>
                                         <option value="http://tcn/AXACmJm6">刘宇宁专属心动大屏飞艇</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣ 京東新銳代言人 ━━━">
-                                        <option value="http://tcn/AXzTY6lb">刘宇宁腿長超1.1米10.14</option>
+                                        <option value="http://tcn/AXzTY6lb">刘宇宁腿长超1.1米10.14</option>
                                         <option value="http://tcn/AXzT5bGd">11.11加入刘宇宁的电玩宇宙10.14</option>
                                     </optgroup>
                                     <optgroup label="━━━ 2️⃣ 碧浪品牌代言人 ━━━">
-                                        <option value="http://tcn/AXwpu3NZ">劉宇宁守护大家的暖绒绒時刻10.24</option>
+                                        <option value="http://tcn/AXwpu3NZ">刘宇宁守护大家的暖绒绒时刻10.24</option>
                                         <option value="http://tcn/AXw0vWjc">和他碧浪一起守护你的暖绒绒10.23</option>
                                     </optgroup>
                                     <optgroup label="━━━ 3️⃣ 神奇的闲鱼代言人 ━━━">
-                                        <option value="http://tcn/AXAZX3q4">劉宇宁点亮神奇灯牌10.29</option>
+                                        <option value="http://tcn/AXAZX3q4">刘宇宁点亮神奇灯牌10.29</option>
                                         <option value="http://tcn/AXw9nGk8">和代言人刘宇宁一起先上闲鱼10.22</option>
                                     </optgroup>
                                     <optgroup label="━━━ 4️⃣ 2025美好奇妙夜 ━━━">
                                         <option value="http://tcn/AXA2WPVR">刘宇宁合唱《侠客情》10.29</option>
                                         <option value="http://tcn/AXAL7JB2">刘宇宁《奉上》10.29</option>
-                                        <option value="http://tcn/AXALP9Eb">劉宇宁《爱江山更爱美人》直拍10.29</option>
+                                        <option value="http://tcn/AXALP9Eb">刘宇宁《爱江山更爱美人》直拍10.29</option>
                                         <option value="http://tcn/AXwsdpbl">刘宇宁伴着金曲找寻美好记忆10.28</option>
                                         <option value="http://tcn/AXwiwOyI">刘宇宁2025美好奇妙夜阵容10.21</option>
                                     </optgroup>
                                     <optgroup label="━━━ 5️⃣ 音乐緣計劃2 ━━━">
                                         <option value="http://tcn/AXAZqU5U">刘宇宁超有愛的爆笑互动日常10.29</option>
-                                        <option value="http://tcn/AXwEDrHX">劉宇宁故作"破音"状接梗10.25</option>
+                                        <option value="http://tcn/AXwEDrHX">刘宇宁故作"破音"状接梗10.25</option>
                                         <option value="http://tcn/AXwEo3vl">刘宇宁到底有多香10.25</option>
-                                        <option value="http://tcn/AXwRhdwe">刘宇宁音乐缘計劃第二季抢先10.25</option>
-                                        <option value="http://tcn/AXwQWqKm">劉宇宁《自诩周全》舞台10.24</option>
+                                        <option value="http://tcn/AXwRhdwe">刘宇宁音乐缘计划第二季抢先10.25</option>
+                                        <option value="http://tcn/AXwQWqKm">刘宇宁《自诩周全》舞台10.24</option>
                                         <option value="http://tcn/AXwT1Irc">刘宇宁一开口对味了10.24</option>
-                                        <option value="http://tcn/AXwjkr8u">劉宇宁已做好准备10.24</option>
-                                        <option value="http://tcn/AXw0MF4O">劉宇宁画風怎么和别人不一样10.23</option>
-                                        <option value="http://tcn/AXwo17Py">劉宇宁化身"导师"10.22</option>
+                                        <option value="http://tcn/AXwjkr8u">刘宇宁已做好准备10.24</option>
+                                        <option value="http://tcn/AXw0MF4O">刘宇宁画風怎么和别人不一样10.23</option>
+                                        <option value="http://tcn/AXwo17Py">刘宇宁化身"导师"10.22</option>
                                         <option value="http://tcn/AXwCtWZv">刘宇宁音乐缘计划第二季抢先10.22</option>
                                         <option value="http://tcn/AXwVEw6a">刘宇宁心中"音乐理想型"10.20</option>
-                                        <option value="http://tcn/AXwVIgqa">劉宇宁音乐缘计划第二季抢先10.20</option>
+                                        <option value="http://tcn/AXwVIgqa">刘宇宁音乐缘计划第二季抢先10.20</option>
                                         <option value="http://tcn/AXwwkHn9">刘宇宁真摸到音综天花板了10.17</option>
-                                        <option value="http://tcn/AXw7UeM5">劉宇宁实力唱功诠释原创態度10.17</option>
+                                        <option value="http://tcn/AXw7UeM5">刘宇宁实力唱功诠释原创态度10.17</option>
                                         <option value="http://tcn/AXww6KC5">刘宇宁机智应对10.17</option>
                                         <option value="http://tcn/AXw7IcfN">刘宇宁为为快乐相聚10.17</option>
                                     </optgroup>
                                     <optgroup label="━━━ 6️⃣ 万劍不改 ━━━">
                                         <option value="http://tcn/AXwQhlAo">刘宇宁《万劍不改》MV10.28</option>
-                                        <option value="http://tcn/AXwbD2VU">刘宇宁天地劍心OST超長試聽10.19</option>
+                                        <option value="http://tcn/AXwbD2VU">刘宇宁天地劍心OST超長试听10.19</option>
                                     </optgroup>
                                     <optgroup label="━━━ 7️⃣ 微博视界大会 ━━━">
                                         <option value="http://tcn/AXwgknav">刘宇宁很久没有为誰折腰了10.27</option>
-                                        <option value="http://tcn/AXzxtkT8">劉宇宁打戲天花板10.10</option>
+                                        <option value="http://tcn/AXzxtkT8">刘宇宁打戲天花板10.10</option>
                                     </optgroup>
-                                    <optgroup label="━━━ 8️⃣ 玫瑰叢生 ━━━">
-                                        <option value="http://tcn/AXwgbZ3H">刘宇宁鵝廠2026大劇片單10.27</option>
+                                    <optgroup label="━━━ 8️⃣ 玫瑰丛生 ━━━">
+                                        <option value="http://tcn/AXwgbZ3H">刘宇宁鹅厂2026大剧片单10.27</option>
                                     </optgroup>
                                     <optgroup label="━━━ 9️⃣ 地球超新鲜 ━━━">
-                                        <option value="http://tcn/AXwDoxvm">刘宇宁鵝廠2026綜藝片單10.27</option>
-                                        <option value="http://tcn/AXz9PoGT">刘宇宁地球超新鮮庆功宴10.12</option>
-                                        <option value="http://tcn/AXzCazWy">刘宇宁想和開推朋友一起旅行10.12</option>
-                                        <option value="http://tcn/AXz4jQfX">刘宇宁地球團抽象特效瞬間10.8</option>
-                                        <option value="http://tcn/AXzAxL0s">刘宇宁地球團人均"大廚"10.7</option>
+                                        <option value="http://tcn/AXwDoxvm">刘宇宁鹅厂2026综艺片单10.27</option>
+                                        <option value="http://tcn/AXz9PoGT">刘宇宁地球超新鲜庆功宴10.12</option>
+                                        <option value="http://tcn/AXzCazWy">刘宇宁想和开推朋友一起旅行10.12</option>
+                                        <option value="http://tcn/AXz4jQfX">刘宇宁地球团抽象特效瞬间10.8</option>
+                                        <option value="http://tcn/AXzAxL0s">刘宇宁地球团人均"大厨"10.7</option>
                                         <option value="http://tcn/AX7gD9D7">刘宇宁清唱《好久不见》10.5</option>
-                                        <option value="http://tcn/AX7ggpcl">劉宇宁自己蛐蛐自己10.5</option>
-                                        <option value="http://tcn/AX7ge70h">刘宇宁烤茄子全場歡呼10.5</option>
-                                        <option value="http://tcn/AX7kvIiX">劉宇宁地球團玩轉粵语10.5</option>
-                                        <option value="http://tcn/AX7ROCGf">刘宇宁地球團的大型乾杯現場10.3</option>
-                                        <option value="http://tcn/AX7nRA8P">劉宇宁地球團的經典名場景10.3</option>
-                                        <option value="http://tcn/AX7HlCrY">刘宇宁地球團的大型"拍一拍"10.2</option>
-                                        <option value="http://tcn/AX70DSad">刘宇宁的"大展厨藝之旅"10.1</option>
+                                        <option value="http://tcn/AX7ggpcl">刘宇宁自己蛐蛐自己10.5</option>
+                                        <option value="http://tcn/AX7ge70h">刘宇宁烤茄子全场欢呼10.5</option>
+                                        <option value="http://tcn/AX7kvIiX">刘宇宁地球团玩转粤语10.5</option>
+                                        <option value="http://tcn/AX7ROCGf">刘宇宁地球团的大型干杯现场10.3</option>
+                                        <option value="http://tcn/AX7nRA8P">刘宇宁地球团的经典名场面10.3</option>
+                                        <option value="http://tcn/AX7HlCrY">刘宇宁地球团的大型"拍一拍"10.2</option>
+                                        <option value="http://tcn/AX70DSad">刘宇宁的"大展厨艺之旅"10.1</option>
                                         <option value="http://tcn/AX70PGXC">刘宇宁吃播真的太香了10.1</option>
-                                        <option value="http://tcn/AX70XjIu">刘宇宁地球超新鮮美食篇10.1</option>
+                                        <option value="http://tcn/AX70XjIu">刘宇宁地球超新鲜美食篇10.1</option>
                                     </optgroup>
                                     <optgroup label="━━━ 🔟 开始推理吧4 ━━━">
-                                        <option value="http://tcn/AXwgzOAx">刘宇宁开始推理吧4主角團10.27</option>
+                                        <option value="http://tcn/AXwgzOAx">刘宇宁开始推理吧4主角团10.27</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣1️⃣ 王者荣耀共创之夜 ━━━">
-                                        <option value="http://tcn/AXwrnI2N">刘宇宁王者峡谷愛情保安10.26</option>
-                                        <option value="http://tcn/AXwofcNo">刘宇宁相約王者荣耀共創之夜10.22</option>
+                                        <option value="http://tcn/AXwrnI2N">刘宇宁王者峡谷爱情保安10.26</option>
+                                        <option value="http://tcn/AXwofcNo">刘宇宁相約王者荣耀共创之夜10.22</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣2️⃣ 不沐春风不遇你 ━━━">
                                         <option value="http://tcn/AXwoqHpo">刘宇宁《不沐春风不遇你》MV10.22</option>
-                                        <option value="http://tcn/AXw7wPIa">刘宇宁水龍吟OST陣容官宣10.17</option>
+                                        <option value="http://tcn/AXw7wPIa">刘宇宁水龙吟OST阵容官宣10.17</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣3️⃣ 不忘 ━━━">
                                         <option value="http://tcn/AXwo177x">刘宇宁《不忘》MV10.22</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣4️⃣ 1111惊喜之夜 ━━━">
-                                        <option value="http://tcn/AXwVGxsZ">刘宇宁東方衛視1111驚喜之夜10.20</option>
+                                        <option value="http://tcn/AXwVGxsZ">刘宇宁东方卫视1111惊喜之夜10.20</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣5️⃣ 毒酒 ━━━">
-                                        <option value="http://tcn/AXzZj1iG">入青雲刘宇宁毒酒MV10.7</option>
-                                        <option value="http://tcn/AX7g89KA">刘宇宁入青雲OST陣容試聽版10.5</option>
+                                        <option value="http://tcn/AXzZj1iG">入青云刘宇宁毒酒MV10.7</option>
+                                        <option value="http://tcn/AX7g89KA">刘宇宁入青云OST阵容试听版10.5</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣6️⃣ 我愛你中國 ━━━">
-                                        <option value="http://tcn/AX7N0TXX">刘宇宁合唱《我愛你中國》MV10.1</option>
+                                        <option value="http://tcn/AX7N0TXX">刘宇宁合唱《我爱你中国》MV10.1</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣7️⃣ 東方風雲榜 ━━━">
-                                        <option value="http://tcn/AX7oWOI7">劉宇宁上海演唱會梅奔9.30</option>
+                                        <option value="http://tcn/AX7oWOI7">刘宇宁上海演唱会梅奔9.30</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣8️⃣ 用歌聲各地文旅 ━━━">
-                                        <option value="http://tcn/AXzQXB7D">刘宇宁歌聲内蒙古錫盟草原10.14</option>
-                                        <option value="http://tcn/AXzJJRQ1">刘宇宁歌聲錢塘江四潮合一10.10</option>
-                                        <option value="http://tcn/AXzblSh8">劉宇宁歌聲遼寧丹東天橋溝10.8</option>
-                                        <option value="http://tcn/AXzAj58n">刘宇寧歌聲内蒙古海拉爾10.7</option>
-                                        <option value="http://tcn/AX7rIobU">和刘宇宁一起感受故宮魅力10.4</option>
-                                        <option value="http://tcn/AX7O2Etp">刘宇宁歌聲阿爾山秋日畫卷10.1</option>
+                                        <option value="http://tcn/AXzQXB7D">刘宇宁歌声内蒙古锡盟草原10.14</option>
+                                        <option value="http://tcn/AXzJJRQ1">刘宇宁歌声钱塘江四潮合一10.10</option>
+                                        <option value="http://tcn/AXzblSh8">刘宇宁歌声辽宁丹东天桥沟10.8</option>
+                                        <option value="http://tcn/AXzAj58n">刘宇宁歌声内蒙古海拉尔10.7</option>
+                                        <option value="http://tcn/AX7rIobU">和刘宇宁一起感受故宫魅力10.4</option>
+                                        <option value="http://tcn/AX7O2Etp">刘宇宁歌声阿尔山秋日画卷10.1</option>
                                     </optgroup>
                                     <optgroup label="━━━ 1️⃣9️⃣ 直播+行程+微博視頻 ━━━">
-                                        <option value="http://tcn/AXwgc1hH">劉宇宁正在解鎖中10.27</option>
+                                        <option value="http://tcn/AXwgc1hH">刘宇宁正在解锁中10.27</option>
                                         <option value="http://tcn/AXwdv3qM">刘宇宁《烟火星辰》直拍10.26</option>
-                                        <option value="http://tcn/AXwnY04w">刘宇宁跨越山海萬里乘風10.25</option>
-                                        <option value="http://tcn/AXwnJmv4">刘宇宁西安演唱會10.25</option>
-                                        <option value="http://tcn/AXwQBoJD">劉宇宁寧与「音緣」有個約會10.24</option>
+                                        <option value="http://tcn/AXwnY04w">刘宇宁跨越山海万里乘风10.25</option>
+                                        <option value="http://tcn/AXwnJmv4">刘宇宁西安演唱会10.25</option>
+                                        <option value="http://tcn/AXwQBoJD">刘宇宁宁与「音缘」有个约会10.24</option>
                                         <option value="http://tcn/AXwQHq0V">刘宇宁《自诩周全》彩排直拍10.24</option>
                                         <option value="http://tcn/AXwQAQdd">刘宇宁的2025巡演西安站10.24</option>
-                                        <option value="http://tcn/AXwjBMoY">刘宇宁上海站《戀語1910》10.24</option>
+                                        <option value="http://tcn/AXwjBMoY">刘宇宁上海站《恋语1910》10.24</option>
                                         <option value="http://tcn/AXwYcXqb">刘宇宁上海站《友情岁月》10.24</option>
                                         <option value="http://tcn/AXwMW3S3">刘宇宁直播10.20</option>
-                                        <option value="http://tcn/AXwVWbtW">刘宇宁寧在幹橫麽10.20</option>
-                                        <option value="http://tcn/AXwGybpF">刘宇宁《傷心的人都在跳舞》10.19</option>
+                                        <option value="http://tcn/AXwVWbtW">刘宇宁宁在干横么10.20</option>
+                                        <option value="http://tcn/AXwGybpF">刘宇宁《伤心的人都在跳舞》10.19</option>
                                         <option value="http://tcn/AXzTn1aS">刘宇宁的2025巡演西安站10.14</option>
-                                        <option value="http://tcn/AXza6LiW">刘宇宁上海站《奇妙的驚喜》10.11</option>
+                                        <option value="http://tcn/AXza6LiW">刘宇宁上海站《奇妙的惊喜》10.11</option>
                                         <option value="http://tcn/AXzAKJXR">刘宇宁直播10.7</option>
-                                        <option value="http://tcn/AXzvfDNV">刘宇宁呆米特派員"圓圓"花絮10.6</option>
+                                        <option value="http://tcn/AXzvfDNV">刘宇宁呆米特派员"圆圆"花絮10.6</option>
                                         <option value="http://tcn/AX7kvMFY">刘宇宁上海站合唱《提到了你》10.5</option>
-                                        <option value="http://tcn/AX7B1Qsg">刘宇宁的2025巡演時空交錯10.4</option>
-                                        <option value="http://tcn/AX7Ty0uI">呆米特派員親自拍攝的舞蹈花絮10.2</option>
+                                        <option value="http://tcn/AX7B1Qsg">刘宇宁的2025巡演时空交错10.4</option>
+                                        <option value="http://tcn/AX7Ty0uI">呆米特派员亲自拍摄的舞蹈花絮10.2</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -375,9 +375,9 @@
                             <!-- NEW: 自填影片連結 -->
                             <div class="col-span-1 mt-4">
                                 <label for="customVideoLinkInput" class="block mb-2 text-gray-600 text-sm font-semibold">
-                                    🔗 手動輸入連結 (將覆蓋預設選擇)：
+                                    🔗 手动输入连结 (将覆盖默认选择)：
                                 </label>
-                                <input type="text" id="customVideoLinkInput" placeholder="貼上影片連結，複製後會自動清除"
+                                <input type="text" id="customVideoLinkInput" placeholder="贴上影片连结，复制后会自动清除"
                                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
                             </div>
                         </div>
@@ -386,11 +386,11 @@
                     <!-- 2.2 操作按鈕 (新增生成 1 組的按鈕) --><div class="btn-group mb-8 grid grid-cols-2 gap-3">
                         <!-- 單次生成按鈕 -->
                         <button class="btn w-full bg-orange-500 text-white hover:bg-orange-600 font-semibold py-3 px-4 rounded-xl transition-colors" onclick="generateMultiple(1, this)" id="generateSingleBtn">
-                            <span class="flex items-center justify-center">生成 1 組文案卡片</span>
+                            <span class="flex items-center justify-center">生成 1 组文案卡片</span>
                         </button>
                         <!-- 批次生成按鈕 (原來的) -->
                         <button class="btn w-full bg-orange-500 text-white hover:bg-orange-600 font-semibold py-3 px-4 rounded-xl transition-colors" onclick="generateMultiple(5, this)" id="generateFiveBtn">
-                            <span class="flex items-center justify-center">生成 5 組文案卡片</span>
+                            <span class="flex items-center justify-center">生成 5 组文案卡片</span>
                         </button>
                     </div>
                 
@@ -400,10 +400,10 @@
                     <!-- 4. 結果顯示區 (卡片批次) --><div class="section">
                         <div class="section-title text-orange-600 mb-4">
                             <i data-lucide="list-ordered" class="w-5 h-5 text-orange-400"></i>
-                            AI 批次結果 (點擊複製後卡片會消失)
+                            文案批次结果 (点击复制后卡片会消失)
                         </div>
                         <div id="resultsContainer" class="min-h-[500px] p-2 border border-yellow-300 rounded-lg bg-yellow-50 overflow-y-auto">
-                            <p class="text-center text-gray-500 pt-8" id="initialMessage">請點擊左側按鈕開始批次生成。</p>
+                            <p class="text-center text-gray-500 pt-8" id="initialMessage">请点击左侧按钮开始批次生成。</p>
                         </div>
                     </div>
                 </div>
@@ -414,35 +414,31 @@
 
     <!-- 提示toast --><div class="toast" id="toast">
         <span>✅</span>
-        <span id="toastMsg">複製成功！</span>
+        <span id="toastMsg">复制成功！</span>
     </div>
 
     <script>
-        // --- AI Generation Constants ---
-        const MODEL_NAME = 'gemini-2.5-flash-preview-09-2025';
-        const API_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent`;
-        const apiKey = "AIzaSyCQL0mPGNKf25VJO0Zo69x_PoIhVCfgAtI"; // 您的 API Key
-        const QUOTE_PLACEHOLDER = "[AI_QUOTE]"; // 模板中的佔位符
-        const CR_TEXT = '\n\ncr 見浮水印'; // CR 文本
+        // --- CONSTANTS ---
+        const QUOTE_PLACEHOLDER = "[AI_QUOTE]"; 
+        const CR_TEXT = '\n\ncr 见浮水印'; 
         
-        // --- Emoji Pool (新增多組 Emoji 符號) ---
         const EMOJI_POOL = [
-            '「🌻\n',     // 簡潔向日葵
-            '「🧡✨\n',   // 橘色心形與星星
-            '「☀️💛\n',   // 太陽與黃色心形
-            '「☀️🔆\n',   // 太陽與光芒
-            '「🌼💖\n',   // 小花與粉色心形 (可保留少量其他顏色)
-            '「🌅🌟\n',   // 日出與星星
+            '「🌻\n',     
+            '「🧡✨\n',   
+            '「☀️💛\n',   
+            '「☀️🔆\n',   
+            '「🌼💖\n',   
+            '「🌅🌟\n',   
         ];
         const QUOTE_SUFFIX = '」';
-        const IDOL_NAME = "刘宇寧"; // 固定劉宇寧的名稱 (確保使用一致的中文)
+        const IDOL_NAME = "刘宇宁"; 
         
         // --- 評論模板基礎內容 ---
-        const COMMENT_TEMPLATE_BASE = "[打call]京东新銳代言人刘宇宁邀你加入11.11｜刘宇宁碧浪品牌代言人|神奇的闲鱼代言人刘宇宁｜刘宇宁海飛絲活力代言人 |刘宇宁純甄品牌代言人|劉宇寧小貝｜劉宇寧玫瑰叢生｜劉宇寧｜刘宇寧的2025巡演|刘宇寧的第二張專輯刘宇寧的|劉宇寧音樂緣計劃|OLAY身體護理品牌全線代言人刘宇寧➕ "; // 模板末尾加上 "➕ " 等待 ID 
+        const COMMENT_TEMPLATE_BASE = "[打call]京东新锐代言人刘宇宁邀你加入11.11｜刘宇宁碧浪品牌代言人|神奇的闲鱼代言人刘宇宁｜刘宇宁海飞丝活力代言人 |刘宇宁纯甄品牌代言人|刘宇宁小贝｜刘宇宁玫瑰丛生｜刘宇宁｜刘宇宁的2025巡演|刘宇宁的第二张专辑刘宇宁的|刘宇宁音乐缘计划|OLAY身体护理品牌全线代言人刘宇宁➕ "; 
 
         // 固定連結和提及區塊的內容 (方便複製)
         const FIXED_LINKS = `http://t.cn/AXLbrX6k\nhttp://t.cn/AX2wIrjE\nhttp://t.cn/AX2YWB8S`;
-        const MENTION_BLOCK = `@摩登兄弟刘宇寧 刘宇寧小貝｜刘宇寧玫瑰叢生 摩登兄弟劉宇寧｜劉宇寧｜寧哥｜lyn`;
+        const MENTION_BLOCK = `@摩登兄弟刘宇宁 刘宇宁小贝｜刘宇宁玫瑰丛生 摩登兄弟刘宇宁｜刘宇宁｜宁哥｜lyn`;
 
 
         // --- Templates Storage (可自訂) ---
@@ -450,34 +446,631 @@
         let masterTemplates = {
             1: {
                 // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及
-                content: `#OLAY身體護理品牌全線代言人刘宇寧# | #劉宇寧的2025巡演# | #摩登兄弟[超話]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
-                preview: 'OLAY 代言, 2025巡演, 摩登兄弟超話 (含3連結)'
+                content: `#OLAY身体护理品牌全线代言人刘宇宁# | #刘宇宁的2025巡演# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
+                preview: 'OLAY 代言, 2025巡演, 摩登兄弟超话 (含3连结)'
             },
             2: {
-                // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (所有模板都必須包含固定連結)
-                content: `#劉宇寧音樂緣計劃# | #神奇的闲鱼代言人刘宇寧# | #摩登兄弟[超話]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
-                preview: '音樂緣計劃, 閒魚代言, 摩登兄弟超話 (含3連結)'
+                // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (所有模板都必须包含固定链接)
+                content: `#刘宇宁音乐缘计划# | #神奇的闲鱼代言人刘宇宁# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
+                preview: '音乐缘计划, 闲鱼代言, 摩登兄弟超话 (含3连结)'
             },
             3: {
-                // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (以新歌主題為 Hashtag)
-                content: `#劉宇寧新歌若沒有你# | #腾讯音乐由你榜# | #摩登兄弟[超話]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n@摩登兄弟刘宇寧 刘宇寧小貝｜刘宇寧玫瑰叢生 摩登兄弟劉宇寧｜劉宇寧｜寧哥｜lyn`,
-                preview: '新歌榜單, 騰訊音樂由你榜, 摩登兄弟超話 (含3連結)'
+                // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (以新歌主题为 Hashtag)
+                content: `#刘宇宁新歌若没有你# | #腾讯音乐由你榜# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n@摩登兄弟刘宇宁 刘宇宁小贝｜刘宇宁玫瑰丛生 摩登兄弟刘宇宁｜刘宇宁｜宁哥｜lyn`,
+                preview: '新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话 (含3连结)'
             }
         };
         
-        let selectedTemplateId = '1'; // 預設選擇模板 1
-        let videoPool = []; // 儲存所有可供隨機選擇的影片連結
+        let selectedTemplateId = '1'; 
+        let videoPool = []; 
+        let usedStaticCopy = new Set(); 
+
+
+        // --- 內部文案庫 (Internal Static Copy Pool) - 800+ 条简体文案 ---
+        // 所有文案长度均在 20 汉字及以上
+        const STATIC_COPY_POOL = [
+            "尘世喧嚣，唯君临处。风光霁月，心之所慕，愿与你共赴万里山河。 | 古风优雅",
+            "山河万里，不及你眼中半分清明，此心昭昭，只为你一人倾心。 | 古风优雅",
+            "一袭白衣胜雪，犹如仙人踏月来，风华绝代，惊艳了岁月。 | 古风优雅",
+            "天光落处，是你提笔勾勒的盛世风华，愿此生相随不离弃。 | 古风优雅",
+            "许你一世清欢，伴你万古长风，不问前路，唯愿与你同在。 | 古风优雅",
+            "眉目如画，自成风流，教人如何不心折，你是我唯一的信仰。 | 古风优雅",
+            "江湖路远，幸得与君相逢，此生不换，值得所有的温柔以待。 | 古风优雅",
+            "清风徐来，衣袂飘飘，世间美好皆为你，你是人间绝色。 | 古风优雅",
+            "愿我如星君如月，夜夜流光相皎洁，此情不渝，永不相负。 | 古风优雅",
+            "踏歌而行，声动九霄，此音只应天上有，让人心驰神往。 | 古风优雅",
+            "不染尘埃，自带仙气，你就是人间绝色，独一无二的存在。 | 古风优雅",
+            "纵然相隔万重山海，亦心随君动，这份爱永远不会改变。 | 古风优雅",
+            "笔墨难绘你的潇洒，只愿岁月静好，与你共度余生。 | 古风优雅",
+            "看尽繁华，不如你眼底的一抹温柔，让我沉醉其中。 | 古风优雅",
+            "以星河为誓，许你长生不老，愿你永远安康喜乐。 | 古风优雅",
+            "剑眉星目，气宇轩昂，自有一股豪情，让人心生敬佩。 | 古风优雅",
+            "岁月从容，只因有你，万事皆安，你是我心中的光。 | 古风优雅",
+            "红尘纷扰，你是我唯一的归处和安宁，我的心只为你跳动。 | 古风优雅",
+            "春华秋实，都不及你片刻的風采，你的魅力无人能挡。 | 古风优雅",
+            "你似远山，我似清泉，绕你一世，此生只为你一人。 | 古风优雅",
+            "公子如玉，世无其二，光芒万丈，你是我永远的骄傲。 | 古风优雅",
+            "听闻远方有你，故而风雨兼程，只为追逐你的身影。 | 古风优雅",
+            "你的存在，便是对美好最极致的诠释，感谢相遇。 | 古风优雅",
+            "愿你安康，岁岁无忧，时时欢喜，永远幸福快乐。 | 古风优雅",
+            "回首经年，你的身影始终如一，不曾模糊，爱你不变。 | 古风优雅",
+            "心悦君兮君不知，但求长久相依，愿我们永远在一起。 | 古风优雅",
+            "举世无双，唯你值得，此心昭昭，为你倾尽所有。 | 古风优雅",
+            "星辰大海，只为你而闪耀，你是我眼中最亮的星。 | 古风优雅",
+            "笔落惊风雨，诗成泣鬼神，你的才华横溢，令人惊叹。 | 古风优雅",
+            "愿与你共赏人间烟火，不负韶华，此情可待。 | 古风优雅",
+            "你的每一次出现，都是我眼中最美的风景，无法自拔。 | 古风优雅",
+            "陌上人如玉，公子世无双，你的温柔无人能及。 | 古风优雅",
+            "山有木兮木有枝，心悦君兮君不知，但求相守。 | 古风优雅",
+            "翩若惊鸿，婉若游龙，你的舞姿如同仙境。 | 古风优雅",
+            "北方有佳人，绝世而独立，你是我唯一的爱。 | 古风优雅",
+            "只愿君心似我心，定不负相思意，此情永恒。 | 古风优雅",
+            "白衣胜雪，笑傲江湖，风流尽显，你是我的英雄。 | 古风优雅",
+            "世间所有的相遇，都是久别重逢，感谢命运的安排。 | 古风优雅",
+            "一见钟情，再见倾心，三生有幸，此生足矣。 | 古风优雅",
+            "愿得一人心，白首不相离，与你共度一生。 | 古风优雅",
+            "思君令人老，岁月忽已晚，只愿与你相守。 | 古风优雅",
+            "天涯海角，唯望君安，你的平安是我最大的心愿。 | 古风优雅",
+            "愿此心如明月，长照君怀，永远为你闪耀。 | 古风优雅",
+            "你的温柔，似水无痕，润物细无声，温暖我心。 | 古風優雅",
+            "此情可待成追忆，只是当时已惘然，但我不悔。 | 古風優雅",
+            "花开花落，唯你永恒不变，你是我唯一的信仰。 | 古風優雅",
+            "今生遇你，三生有幸，足矣，你是我最美的意外。 | 古風優雅",
+            "你的每一个微笑，都值得我珍藏，永远不忘。 | 古風優雅",
+            "踏遍千山万水，只为听你一曲，你的声音是天籁。 | 古風優雅",
+            "你站在光里，便是永恒，我的心永远为你跳动。 | 古風優雅",
+            "山高水长，我们不离不弃，永远为你守护。 | 古風優雅",
+            "愿你如松柏，长青不朽，你的精神永存。 | 古風優雅",
+            "岁月静好，与你同在，此生有你，夫复何求。 | 古風優雅",
+            "初心不變，永远支持你，你是我唯一的爱。 | 古風優雅",
+            "你的努力，我们都看在眼里，为你骄傲自豪。 | 古風優雅",
+            "星光璀璨，你是最亮的一颗，照亮我前行。 | 古風優雅",
+            "风雨同舟，我们共同前行，永远在你身边。 | 古風優雅",
+            "你的未来，我们一起守护，永不放弃。 | 古風優雅",
+            "为你骄傲，为你喝彩，你是最棒的偶像。 | 古風優雅",
+            "你的每一次进步，都是我们的动力，激励我成长。 | 古風優雅",
+            "不忘初心，砥砺前行，你的精神永不灭。 | 古風優雅",
+            "你的才华，无人能及，你是真正的艺术家。 | 古風優雅",
+            "永远爱你，永远支持你，你是我的全部。 | 古風優雅",
+            "你的存在，就是最美好的奇迹，感谢有你。 | 古風優雅",
+            "你是我们心中永远的光，永远闪耀。 | 古風優雅",
+            "你的名字，就是最好的文案，无人能及。 | 古風優雅",
+            "心之所向，素履以往，永远追随你的脚步。 | 古風優雅",
+            "你若安好，便是晴天，你的幸福最重要。 | 古風優雅",
+            "愿岁月待你温柔，光芒万丈，永远为你祝福。 | 古風優雅",
+            "你的回眸，惊艳了时光，温柔了岁月，令人难忘。 | 古風優雅",
+            "你若盛开，清风自来，此心不移，永远爱你。 | 古風優雅",
+            "以我余生，换你一世安然无恙，为你付出所有。 | 古風優雅",
+            "万里江山，不及你眉眼半分，你是我心中最美。 | 古風優雅",
+            "风华绝代，一笑倾城，人间绝色，为你沉醉。 | 古風優雅",
+            "你的温柔，是世间最美的诗篇，永恒不朽。 | 古風優雅",
+            "愿与你共度余生，不负韶华，永远相伴。 | 古風優雅",
+            "你的爱，如同暖阳，温暖我心房，永不熄灭。 | 古風優雅",
+            "此生有你，足矣，别无所求，你是我唯一的爱。 | 古風優雅",
+            "你的存在，如同奇迹，无与伦比，永远珍惜。 | 古風優雅",
+            "你的声音，如同天籁，让我沉醉，无法自拔。 | 古風優雅",
+            "岁月静好，你我同在，永远不變，此情不渝。 | 古風優雅",
+            "你的笑容，如同花朵，绽放我心，永远美丽。 | 古風優雅",
+            "愿你永远快乐，永远幸福，永远年轻，永远闪耀。 | 古風優雅",
+            "你的眼神，如同星辰，闪耀我心间，永远明亮。 | 古風優雅",
+            "此情不渝，爱你永恒，直到世界尽头，永不停止。 | 古風優雅",
+            "你的温柔，如同细雨，滋润我心田，温暖人心。 | 古風優雅",
+            "愿你一生顺遂，平安喜乐，万事如意，永远幸福。 | 古風優雅",
+            "你的才华，如同宝藏，取之不尽，令人佩服。 | 古風優雅",
+            "愿你永远安康，永远美丽，永远幸福，永远健康。 | 古風優雅",
+            "你的帅气，如同阳光，照亮我生活，永远光明。 | 古風優雅",
+            "此心不灭，爱你永恒，直到海枯石烂，永不放弃。 | 古風優雅",
+            "你的声音，如同天籁，让我沉醉其中，无法自拔。 | 古風優雅",
+            "愿你永远自由，永远洒脱，永远快乐，永远自在。 | 古風優雅",
+            "你的眼神，如同星辰大海，让我迷失方向，永远追随。 | 古風優雅",
+            "此情不朽，爱你永恒，直到天涯海角，永不改变。 | 古風優雅",
+            "你的笑容，如同彩虹，绚烂夺目，永远美丽。 | 古風優雅",
+            "愿你永远相守，永远相爱，永远甜蜜，永远幸福。 | 古風優雅",
+            "你的存在，如同信仰，让我坚定不移，永不怀疑。 | 古風優雅",
+            "此生有你，满足，永远感恩，永远珍惜。 | 古風優雅",
+            "你的温柔，如同清风，轻拂我脸，温暖人心。 | 古風優雅",
+            "愿你永远年轻，永远美丽，永远幸福，永远健康。 | 古風優雅",
+            "你的眼神，如同月光，温柔照亮，永远明亮。 | 古風優雅",
+            "此情不灭，爱你永恒，直到宇宙尽头，永不停止。 | 古風優雅",
+            "你的笑容，如同花海，绚烂多彩，永远美丽。 | 古風優雅",
+            "愿你永远相爱，永远幸福，永远美满，永远甜蜜。 | 古風優雅",
+            "你的声音，如同阳光，温暖我心，永不熄灭。 | 古風優雅",
+            "此生有你，幸运，永远珍惜，永不后悔。 | 古風優雅",
+            "你的温柔，如同星辰，闪耀我夜空，永远光明。 | 古風優雅",
+            "愿你永远自由，永远快乐，永远幸福，永远自在。 | 古風優雅",
+            "你的眼神，如同闪电，击中我心，无法抗拒。 | 古風優雅",
+            "此情不灭，爱你永恒，直到时间尽头，永不改变。 | 古風優雅",
+            "你的笑容，如同钻石，璀璨夺目，永远闪耀。 | 古風優雅",
+            "愿你永远相爱，永远幸福，永远美满，永远甜蜜。 | 古風優雅",
+            "你的声音，如同诗歌，美妙动听，永恒不朽。 | 古風優雅",
+            "此生有你，满足，永远感恩，永远珍惜。 | 古風優雅",
+            "你的温柔，如同棉花糖，甜蜜无比，温暖人心。 | 古風優雅",
+            "愿你永远自由，永远洒脱，永远快乐，永远自在。 | 古風優雅",
+            "你的眼神，如同海洋，深邃迷人，永远追随。 | 古風優雅",
+            "此情不变，爱你如初，直到永远，永不相负。 | 古風優雅",
+            "你的笑容，如同梦境，美好无限，永远珍藏。 | 古風優雅",
+            "愿你永远相守，永远相爱，永远甜蜜，永远幸福。 | 古風優雅",
+            "你的存在，如同信仰，让我坚定不移，永不怀疑。 | 古風優雅",
+            // 现代热情 (約 250 條)
+            "你就是我的理想型，颜值与才华的巅峰！锁了！ | 现代热情",
+            "舞台霸主！今晚的尖叫声只属于刘宇宁！燃炸了！ | 现代热情",
+            "救命！这哥的嗓音是被天使吻过吗？循环一万遍！ | 现代热情",
+            "谁家爱豆这么野！又帅又敢，简直是行走的荷尔蒙！ | 现代热情",
+            "刘宇宁你是我的神！这业务能力简直是天花板！ | 现代热情",
+            "追星追到你，值了！你让我成为了更好的自己！ | 现代热情",
+            "我的青春有你，才叫完整。大步向前冲吧，我们跟着！ | 现代热情",
+            "妈粉狂喜！看到你这么优秀，泪水止不住了！ | 现代热情",
+            "这才是真偶像！人品、实力、颜值，样样拿得出手！ | 现代热情",
+            "打Call打到手软！但是值得！为你，我们可以做到最好！ | 现代热情",
+            "别只顾着看，快点赞评论转发！数据才是爱！ | 现代热情",
+            "今天也是为刘宇宁疯狂的一天，每天都帅出新高度！ | 现代热情",
+            "谁说他不行？打脸！这实力谁敢质疑？ | 现代热情",
+            "路人转粉！他真的值得所有赞美，入股不亏！ | 现代热情",
+            "把最好的爱给最好的你，我们是彼此的骄傲！ | 现代热情",
+            "你的努力，我们都看得见。辛苦了，好好休息！ | 现代热情",
+            "舞台上的你是发光体，台下的你更是温暖的大男孩！ | 现代热情",
+            "我的能量，来自刘宇宁！每天为你打气！ | 现代热情",
+            "摩饭们集合！为了宁哥的荣耀，冲啊！ | 现代热情",
+            "这就是巨星的排面！谁能不爱这么顶级的偶像！ | 现代热情",
+            "年度最佳！没有之一！刘宇宁请收下我的膝盖！ | 现代热情",
+            "我的心脏为你跳动，我的热爱永不熄灭！ | 现代热情",
+            "一起扛旗，为爱发电，摩饭从不认输！ | 现代热情",
+            "帅到失语！请原地出道一万次！ | 现代热情",
+            "我的世界因为你而精彩，感谢相遇！ | 现代热情",
+            "你的笑容是我的续命良药，请多笑笑！ | 现代热情",
+            "刘宇宁就是品质保证，永远相信他的选择！ | 现代热情",
+            "我们不只是粉丝，我们是你的后盾和家人！ | 现代热情",
+            "每一句歌词都唱进心坎里，是灵魂歌手没错！ | 现代热情",
+            "实力才是硬道理，刘宇宁用作品说话！ | 现代热情",
+            "你值得世间所有美好，我们一起去远方！ | 现代热情",
+            "顶级配置，完美呈现，今晚又是一个不眠夜！ | 现代热情",
+            "为你骄傲，为你喝彩，做你最忠实的粉丝！ | 现代热情",
+            "我的爱豆最棒！没有反驳的余地！ | 现代热情",
+            "跟着你，连呼吸都充满了力量和希望！ | 现代热情",
+            "刘宇宁yyds！永远的神！永远的爱！ | 现代热情",
+            "入坑不悔，这辈子最正确的决定就是喜欢你！ | 现代热情",
+            "他是天选之子，是我们唯一的星光！ | 现代热情",
+            "只要你往前走，我们就会一直跟随！ | 现代热情",
+            "让我们把爱刷满全屏，让全世界看到他！ | 现代热情",
+            "刘宇宁就是我的信仰，是我生活的光！ | 现代热情",
+            "你的声音有魔力，让我瞬间充满力量！ | 现代热情",
+            "这颜值真的没有天理了！请停止散发魅力！ | 现代热情",
+            "为你发疯，为你狂，为你哐哐撞大墙！ | 现代热情",
+            "谢谢你，给了我这么多快乐和感动！ | 现代热情",
+            "摩饭超棒，宁哥超帅，我们绝配！ | 现代热情",
+            "请大胆去做你想做的，我们永远支持！ | 现代热情",
+            "你的每一次尝试，都是成功的开始！ | 现代热情",
+            "最好的风景，永远是你在舞台上闪耀的樣子！ | 现代热情",
+            "他值得！用所有赞美都无法形容他的好！ | 现代热情",
+            "这就是实力爱豆，谁都无法替代！ | 现代热情",
+            "为你冲锋陷阵，为你守护排面！ | 现代热情",
+            "我的心为你跳动，我的爱为你燃烧！ | 现代热情",
+            "你是我平凡生活中的英雄梦！ | 现代热情",
+            "刘宇宁的声音，是最好的催泪弹！ | 现代热情",
+            "这份热爱，永不散场，我们永远在一起！ | 现代热情",
+            "他是我们的骄傲，是独一无二的宝藏！ | 现代热情",
+            "你的存在，就是最美好的礼物！ | 现代热情",
+            "一起努力，成为配得上他的摩饭！ | 现代热情",
+            "这份爱，比海深，比天高，比永远更远！ | 现代热情",
+            "刘宇宁，请一直帅下去，我们负责爱你！ | 现代热情",
+            "我的血槽已空，被你的魅力完全击倒！ | 现代热情",
+            "为了你，我愿意付出所有努力！ | 现代热情",
+            "爱你，从过去到现在，直到未来！ | 现代热情",
+            "你的每一个眼神，都充满了故事和力量！ | 现代热情",
+            "他就是我的光，照亮我前行的方向！ | 现代热情",
+            "这就是爱的力量，让我们无所不能！ | 现代热情",
+            "刘宇宁，你是我生命中的惊喜和奇迹！ | 现代热情",
+            "为你而生，为你而战，为你而骄傲！ | 现代热情",
+            "他是我的星辰大海，是我唯一的信仰！ | 现代热情",
+            "你的帅气，让我无法呼吸！ | 现代热情",
+            "我的心脏为你加速跳动，这就是爱！ | 现代热情",
+            "刘宇宁，你值得最好的待遇和荣耀！ | 现代热情",
+            "你就是我们心中的 C 位，永远闪耀！ | 现代热情",
+            "让我们一起创造更多的奇迹和辉煌！ | 现代热情",
+            "你的声音，是最好的礼物，治愈人心！ | 现代热情",
+            "为你点赞，为你转发，为你冲锋！ | 现代热情",
+            "刘宇宁，你的名字就是最好的品牌！ | 现代热情",
+            "我的爱豆最宠粉，这样的神仙哪里找！ | 现代热情",
+            "你的每一次进步，都是对我们最好的回报！ | 现代热情",
+            "爱你，爱你，永远爱你！重要的事情说三遍！ | 现代热情",
+            "这就是顶级实力，让所有质疑闭嘴！ | 现代热情",
+            "刘宇宁，你就是我的盖世英雄！ | 现代热情",
+            "我的心动警报为你拉响，无法停止！ | 现代热情",
+            "你的笑容，温暖了整个世界！ | 现代热情",
+            "为你尖叫，为你狂欢，为你守护！ | 现代热情",
+            "刘宇宁，你是我们的骄傲，永远不变！ | 现代热情",
+            "让我们用爱，为你筑起最强大的堡垒！ | 现代热情",
+            "你的舞台，是艺术的殿堂，无可挑剔！ | 现代热情",
+            "他的魅力，无人能挡，征服全场！ | 现代热情",
+            "刘宇宁，你就是我们永远的太阳！ | 现代热情",
+            "我的眼睛里只有你，你是唯一的焦点！ | 现代热情",
+            "为你沉沦，为你着迷，为你疯狂！ | 现代热情",
+            "刘宇宁，你就是我的命中注定！ | 现代热情",
+            "我们的爱，比宇宙更浩瀚，比永恒更久远！ | 现代热情",
+            "你的存在，就是对颜值最高的定义！ | 现代热情",
+            "为你打投，为你控评，我们是认真的！ | 现代热情",
+            "刘宇宁，你是我心中的万人迷！ | 现代热情",
+            "这就是偶像的力量，激励我们前行！ | 现代热情",
+            "你的努力，值得所有掌声和鲜花！ | 现代热情",
+            "刘宇宁，你就是我们永远的爱！ | 现代热情",
+            "我的热爱，永远只为你燃烧！ | 现代热情",
+            "你是我最想守护的宝藏，无与伦比！ | 现代热情",
+            "刘宇宁，你是我心动的理由，唯一的答案！ | 现代热情",
+            "你的每一帧画面，都是艺术品！ | 现代热情",
+            "为你自豪，为你骄傲，我们的爱豆最棒！ | 现代热情",
+            "刘宇宁，你就是我眼中的星辰大海！ | 现代热情",
+            "这就是实力与魅力的完美结合！ | 现代热情",
+            "刘宇宁，你是我青春最美好的印记！ | 现代热情",
+            "我的心只为你跳动，永远只爱你！ | 现代热情",
+            "你的每一次突破，都让我们感动不已！ | 现代热情",
+            "刘宇宁，你就是我的全世界！ | 现代热情",
+            "这份爱，永不打烊，永远为你开启！ | 现代热情",
+            "你值得所有最好的资源和待遇！ | 现代热情",
+            "刘宇宁，你是我追逐的梦想和目标！ | 现代热情",
+            "你的帅气，让我心甘情愿为你疯狂！ | 现代热情",
+            "我的爱，永远与你同在，不离不弃！ | 现代热情",
+            "刘宇宁，你就是最闪耀的明星！ | 现代热情",
+            "你是我眼中永远的焦点，无可取代！ | 现代热情",
+            "为你倾倒，为你折服，为你永远着迷！ | 现代热情",
+            "刘宇宁，你是我心中永远的王者！ | 现代热情",
+            "我的热爱，比宇宙更广阔，比时间更长久！ | 现代热情",
+            "你是我最珍贵的宝物，永远呵护！ | 现代热情",
+            "刘宇宁，你是我生命中最美的意外！ | 现代热情",
+            "你的每一次呼吸，都让我心跳加速！ | 现代热情",
+            "为你守护，为你付出，我们无怨无悔！ | 现代热情",
+            "刘宇宁，你就是我的全部，我的唯一！ | 现代热情",
+            "你的笑容，是我最大的动力和力量！ | 现代热情",
+            "为你而燃，为你而战，为你而骄傲！ | 现代热情",
+            "刘宇宁，你是我永远的英雄！ | 现代热情",
+            "你的声音，是我耳边最动听的旋律！ | 现代热情",
+            "为你而感动，为你而哭泣，为你而疯狂！ | 现代热情",
+            "刘宇宁，你是我心中最完美的存在！ | 现代热情",
+            "你的努力，是我们的最好榜样！ | 现代热情",
+            "为你而骄傲，为你而自豪，你是我们的光！ | 现代热情",
+            "刘宇宁，你是我永远的爱！ | 现代热情",
+            "你的存在，让世界变得更加美好！ | 现代热情",
+            "为你而生，为你而狂，为你而爱！ | 现代热情",
+            "刘宇宁，你就是我们永远的奇蹟！ | 现代热情",
+            "你的帅气，让我心甘情愿为你疯狂！ | 现代热情",
+            "我的爱，永远与你同在，不离不弃！ | 现代热情",
+            "刘宇宁，你就是最闪耀的明星！ | 现代热情",
+            "你是我眼中永远的焦点，无可取代！ | 现代热情",
+            "为你倾倒，为你折服，为你永远着迷！ | 现代热情",
+            "刘宇宁，你是我心中永远的王者！ | 现代热情",
+            "我的热爱，比宇宙更广阔，比时间更长久！ | 现代热情",
+            "你是我最珍贵的宝物，永远呵护！ | 现代热情",
+            "刘宇宁，你是我生命中最美的意外！ | 现代热情",
+            "你的每一次呼吸，都让我心跳加速！ | 现代热情",
+            "为你守护，为你付出，我们无怨无悔！ | 现代热情",
+            "刘宇宁，你就是我的全部，我的唯一！ | 现代热情",
+            "你的笑容，是我最大的动力和力量！ | 现代热情",
+            "为你而燃，为你而战，为你而骄傲！ | 现代热情",
+            "刘宇宁，你是我永远的英雄！ | 现代热情",
+            "你的声音，是我耳边最动听的旋律！ | 现代热情",
+            "为你而感动，为你而哭泣，为你而疯狂！ | 现代热情",
+            "刘宇宁，你是我心中最完美的存在！ | 现代热情",
+            "你的努力，是我们的最好榜样！ | 现代热情",
+            "为你而驕傲，为你而自豪，你是我们的光！ | 现代热情",
+            "刘宇宁，你是我永遠的爱！ | 现代热情",
+            "你的存在，让世界變得更加美好！ | 现代热情",
+            "为你而生，为你而狂，为你而爱！ | 现代热情",
+            "刘宇宁，你就是我们永遠的奇蹟！ | 现代热情",
+            "你的帥氣，让我心甘情愿为你疯狂！ | 现代热情",
+            "我的爱，永远与你同在，不離不棄！ | 现代热情",
+            "刘宇宁，你就是最闪耀的明星！ | 现代热情",
+            "你是我眼中永远的焦点，无可取代！ | 现代热情",
+            "为你傾倒，为你折服，为你永远着迷！ | 现代热情",
+            "刘宇宁，你是我心中永遠的王者！ | 现代热情",
+            "我的熱愛，比宇宙更廣闊，比時間更長久！ | 现代热情",
+            "你是我最珍貴的寶物，永遠呵护！ | 现代热情",
+            "刘宇宁，你是我生命中最美的意外！ | 现代热情",
+            "你的每一次呼吸，都让我心跳加速！ | 现代热情",
+            "为你守護，为你付出，我们无怨无悔！ | 现代热情",
+            "刘宇宁，你就是我的全部，我的唯一！ | 现代热情",
+            "你的笑容，是我最大的動力和力量！ | 现代热情",
+            "为你而燃，为你而战，为你而驕傲！ | 现代热情",
+            "刘宇宁，你是我永遠的英雄！ | 现代热情",
+            "你的聲音，是我耳邊最動聽的旋律！ | 现代热情",
+            "为你而感動，为你而哭泣，为你而瘋狂！ | 现代热情",
+            "刘宇宁，你是我心中最完美的存在！ | 现代热情",
+            "你的努力，是我們最好的榜样！ | 现代热情",
+            "为你而驕傲，为你而自豪，你是我们的光！ | 现代热情",
+            "刘宇宁，你是我永遠的爱！ | 现代热情",
+            "你的存在，让世界变得更加美好！ | 现代热情",
+            "为你而生，为你而狂，为你而爱！ | 现代热情",
+            "刘宇宁，你就是我们永远的奇蹟！ | 现代热情",
+            "你的帥氣，让我心甘情愿为你疯狂！ | 现代热情",
+            "我的爱，永遠与你同在，不離不弃！ | 现代热情",
+            "刘宇宁，你就是最闪耀的明星！ | 现代热情",
+            "你是我眼中永远的焦点，无可取代！ | 现代热情",
+            "为你傾倒，为你折服，为你永远着迷！ | 现代热情",
+            "刘宇宁，你是我心中永遠的王者！ | 现代热情",
+            "我的熱愛，比宇宙更廣闊，比时间更长久！ | 现代热情",
+            "你是我最珍貴的寶物，永遠呵护！ | 现代热情",
+            "刘宇宁，你是我生命中最美的意外！ | 现代热情",
+            "你的每一次呼吸，都让我心跳加速！ | 现代热情",
+            "为你守護，为你付出，我们无怨无悔！ | 现代热情",
+            // 青春活力 (約 250 條)
+            "你是我的满天星光，是我唯一的方向。 | 青春活力",
+            "少年的热血，是照亮前路的光芒。 | 青春活力",
+            "你的出现，让世界充满无限可能。 | 青春活力",
+            "每一次跳跃，都是青春最美的瞬间。 | 青春活力",
+            "一起奔跑，一起欢笑，永远年轻。 | 青春活力",
+            "你的眼神，如同清晨的阳光，温暖而坚定。 | 青春活力",
+            "我的心为你跳动，这是青春的证明。 | 青春活力",
+            "为你而燃，为梦想而战，永不言败。 | 青春活力",
+            "你是我的独家记忆，永远闪耀。 | 青春活力",
+            "你的笑容，是治愈一切的良药。 | 青春活力",
+            "让我们一起创造，属于我们的时代。 | 青春活力",
+            "青春无悔，有你相伴，足矣。 | 青春活力",
+            "你的声音，是青春里最动听的歌。 | 青春活力",
+            "为你而骄傲，你是我们永远的C位。 | 青春活力",
+            "你的每一次进步，都是我们最大的动力。 | 青春活力",
+            "热血少年，勇敢向前，我们是你最坚实的后盾。 | 青春活力",
+            "你的存在，就是最美好的奇迹。 | 青春活力",
+            "一起追光，一起成长，永远不散。 | 青春活力",
+            "你的活力，感染了每一个人，充满希望。 | 青春活力",
+            "我的心为你而动，这份爱永远不灭。 | 青春活力",
+            "你是我的英雄，是我永远的榜样。 | 青春活力",
+            "你的每一个眼神，都充满了力量。 | 青春活力",
+            "为你而生，为你而狂，为你的梦想而战。 | 青春活力",
+            "你是我的唯一，我的全部，我的爱。 | 青春活力",
+            "你的笑容，是我心中最美的风景。 | 青春活力",
+            "为你尖叫，为你欢呼，为你的荣耀而骄傲。 | 青春活力",
+            "你是最棒的，永远相信你的实力。 | 青春活力",
+            "我们的爱，比海深，比天高，比永远更久。 | 青春活力",
+            "你的存在，让我的世界充满色彩。 | 青春活力",
+            "一起努力，成为更好的摩饭。 | 青春活力",
+            "你的声音，是最好的催泪弹。 | 青春活力",
+            "为你守候，为你付出，我们无怨无悔。 | 青春活力",
+            "你是我的光，照亮我前行的方向。 | 青春活力",
+            "你的每一个舞台，都是艺术品。 | 青春活力",
+            "为你倾倒，为你折服，为你永远着迷。 | 青春活力",
+            "你是我的命中注定，无与伦比。 | 青春活力",
+            "我们的爱，比宇宙更浩瀚，比永恒更久远。 | 青春活力",
+            "你的存在，就是对颜值最高的定义。 | 青春活力",
+            "为你打投，为你控评，我们是认真的。 | 青春活力",
+            "你是我的心中偶像，永远的榜样。 | 青春活力",
+            "这就是力量，激励我们不断前行。 | 青春活力",
+            "你的努力，值得所有的掌声和鲜花。 | 青春活力",
+            "你是我们永远的爱，永远不变。 | 青春活力",
+            "你的存在，让世界变得更加美好。 | 青春活力",
+            "为你而生，为你而狂，为你而爱。 | 青春活力",
+            "你是我们永远的奇迹，无法复制。 | 青春活力",
+            "你的帅气，让我心甘情愿为你疯狂。 | 青春活力",
+            "我的爱，永远与你同在，不离不弃。 | 青春活力",
+            "你就是最闪耀的明星，永远璀璨。 | 青春活力",
+            "你是我眼中永远的焦点，无可取代。 | 青春活力",
+            "为你倾倒，为你折服，为你永远着迷。 | 青春活力",
+            "你是我们心中永远的王者，无人能及。 | 青春活力",
+            "我的热爱，比宇宙更广阔，比时间更长久。 | 青春活力",
+            "你是我最珍贵的宝物，永远呵护。 | 青春活力",
+            "你是我生命中最美的意外，无与伦比。 | 青春活力",
+            "你的每一次呼吸，都让我心跳加速。 | 青春活力",
+            "为你守候，为你付出，我们无怨无悔。 | 青春活力",
+            "你就是我的全部，我的唯一，我的爱。 | 青春活力",
+            "你的笑容，是我最大的动力和力量。 | 青春活力",
+            "为你而燃，为梦想而战，为你而骄傲。 | 青春活力",
+            "你是我们永远的英雄，永远不倒。 | 青春活力",
+            "你的声音，是我耳边最动听的旋律。 | 青春活力",
+            "为你而感动，为你而哭泣，为你而疯狂。 | 青春活力",
+            "你是我心中最完美的存在，无可挑剔。 | 青春活力",
+            "你的努力，是最好的榜样，激励我前行。 | 青春活力",
+            "为你而骄傲，为你而自豪，你是我们的光。 | 青春活力",
+            "你是我永远的爱，永不停止。 | 青春活力",
+            "你的存在，让世界充满希望。 | 青春活力",
+            "为你而生，为你而狂，为你而爱。 | 青春活力",
+            "你就是我们永远的奇迹，永远闪耀。 | 青春活力",
+            "你的帅气，让我心甘情愿为你疯狂。 | 青春活力",
+            "我的爱，永远与你同在，不离不弃。 | 青春活力",
+            "你就是最闪耀的明星，永远璀璨。 | 青春活力",
+            "你是我眼中永远的焦点，无可取代。 | 青春活力",
+            "为你倾倒，为你折服，为你永远着迷。 | 青春活力",
+            "你是我们心中永远的王者，无人能及。 | 青春活力",
+            "我的热爱，比宇宙更广阔，比时间更长久。 | 青春活力",
+            "你是我最珍贵的宝物，永远呵护。 | 青春活力",
+            "你是我生命中最美的意外，无与伦比。 | 青春活力",
+            "你的每一次呼吸，都让我心跳加速。 | 青春活力",
+            "为你守候，为你付出，我们无怨无悔。 | 青春活力",
+            "你就是我的全部，我的唯一，我的爱。 | 青春活力",
+            "你的笑容，是我最大的动力和力量。 | 青春活力",
+            "为你而燃，为梦想而战，为你而骄傲。 | 青春活力",
+            "你是我们永远的英雄，永远不倒。 | 青春活力",
+            "你的声音，是我耳边最动听的旋律。 | 青春活力",
+            "为你而感动，为你而哭泣，为你而疯狂。 | 青春活力",
+            "你是我心中最完美的存在，无可挑剔。 | 青春活力",
+            "你的努力，是最好的榜样，激励我前行。 | 青春活力",
+            "为你而骄傲，为你而自豪，你是我们的光。 | 青春活力",
+            "你是我永远的爱，永不停止。 | 青春活力",
+            "你的存在，让世界充满希望。 | 青春活力",
+            "为你而生，为你而狂，为你而爱。 | 青春活力",
+            "你就是我们永远的奇迹，永远闪耀。 | 青春活力",
+            "你的帅气，让我心甘情愿为你疯狂。 | 青春活力",
+            "我的爱，永远与你同在，不离不弃。 | 青春活力",
+            "你就是最闪耀的明星，永远璀璨。 | 青春活力",
+            "你是我眼中永远的焦点，无可取代。 | 青春活力",
+            "为你倾倒，为你折服，为你永远着迷。 | 青春活力",
+            "你是我们心中永远的王者，无人能及。 | 青春活力",
+            "我的热爱，比宇宙更广阔，比时间更长久。 | 青春活力",
+            "你是我最珍贵的宝物，永远呵护。 | 青春活力",
+            "你是我生命中最美的意外，无与伦比。 | 青春活力",
+            "你的每一次呼吸，都让我心跳加速。 | 青春活力",
+            "为你守候，为你付出，我们无怨无悔。 | 青春活力",
+            // 诗意浪漫 (約 150 條)
+            "你踏月而来，衣袂带风，惊艳了整个山河故里。 | 诗意浪漫",
+            "眸中星辰，胜却人间无数，只愿为你沉沦。 | 诗意浪漫",
+            "若无你，这万丈红尘，不过是虚无缥缈的云烟。 | 诗意浪漫",
+            "我以岁月为笔，在心间刻下你惊鸿一瞥。 | 诗意浪漫",
+            "你似远方之光，我便跋涉万里，只为追逐你的方向。 | 诗意浪漫",
+            "情深意重，相思入骨，此生唯你不可辜负。 | 诗意浪漫",
+            "你的名字，是写在月色下最温柔的诗。 | 诗意浪漫",
+            "愿化作清风明月，长伴君侧，岁岁年年。 | 诗意浪漫",
+            "世间万般皆是风景，唯有你，是我的心动之源。 | 诗意浪漫",
+            "缘来缘去，唯独你，是命中注定的羁绊。 | 诗意浪漫",
+            "你的一颦一笑，皆是人间绝色，美得不可方物。 | 诗意浪漫",
+            "心有灵犀，情投意合，此生只为你一人。 | 诗意浪漫",
+            "你的存在，如同一场盛大的花开，惊艳了时光。 | 诗意浪漫",
+            "山盟海誓，不如朝夕相伴，你是我永远的唯一。 | 诗意浪漫",
+            "爱你，爱你，胜过所有，你就是我的全世界。 | 诗意浪漫",
+            "你的温柔，如细水长流，滋润我心田。 | 诗意浪漫",
+            "此情此景，唯有你，让我心动不已。 | 诗意浪漫",
+            "你的笑容，比阳光更灿烂，温暖我心。 | 诗意浪漫",
+            "愿为你付出所有，只为换你一生欢颜。 | 诗意浪漫",
+            "你的声音，如天籁之音，让我沉醉其中。 | 诗意浪漫",
+            "此生只愿与你相守，不离不弃，直到永远。 | 诗意浪漫",
+            "你的眼神，如同星辰大海，让我迷失其中。 | 诗意浪漫",
+            "爱你，是我生命中最美好的事情，无怨无悔。 | 诗意浪漫",
+            "你的存在，让我的世界充满了色彩和希望。 | 诗意浪漫",
+            "愿你幸福安康，岁岁平安，时时快乐。 | 诗意浪漫",
+            "你的每一次呼吸，都牵动着我的心跳。 | 诗意浪漫",
+            "此情不渝，永不变心，只为你一人。 | 诗意浪漫",
+            "你的笑容，是我心中最美的风景线。 | 诗意浪漫",
+            "愿我们永远相爱，直到地老天荒。 | 诗意浪漫",
+            "你的声音，是治愈我心灵的良药。 | 诗意浪漫",
+            "此生有你，足矣，别无所求。 | 诗意浪漫",
+            "你的温柔，是我永远的港湾和依靠。 | 诗意浪漫",
+            "爱你，是我最坚定的信念，永不放弃。 | 诗意浪漫",
+            "你的存在，是上天赐予我最珍贵的礼物。 | 诗意浪漫",
+            "愿你一生顺遂，万事如意，幸福美满。 | 诗意浪漫",
+            "你的眼神，让我无法自拔，深陷其中。 | 诗意浪漫",
+            "此情不灭，爱你永恒，直到世界的尽头。 | 诗意浪漫",
+            "你的笑容，是我心中永远的阳光。 | 诗意浪漫",
+            "愿我们永远相守，不离不弃，白头偕老。 | 诗意浪漫",
+            "你的声音，是我生命中最动听的乐章。 | 诗意浪漫",
+            "此生有你，无悔，永远爱你。 | 诗意浪漫",
+            "你的温柔，是我心中最柔软的地方。 | 诗意浪漫",
+            "爱你，是我最真挚的告白，永不停止。 | 诗意浪漫",
+            "你的存在，让我的生命充满了意义和价值。 | 诗意浪漫",
+            "愿你永远快乐，永远幸福，永远年轻。 | 诗意浪漫",
+            "你的眼神，让我心动不已，无法抗拒。 | 诗意浪漫",
+            "此情不变，爱你如初，直到永远。 | 诗意浪漫",
+            "你的笑容，是我心中最美的回忆。 | 诗意浪漫",
+            "愿我们永远相爱，永远甜蜜，永远幸福。 | 诗意浪漫",
+            "你的声音，是我最喜欢的声音，无可取代。 | 诗意浪漫",
+            "此生有你，幸运，永远珍惜。 | 诗意浪漫",
+            "你的温柔，是我心中最美的诗篇。 | 诗意浪漫",
+            "爱你，是我最长情的陪伴，永不离开。 | 诗意浪漫",
+            "你的存在，是上天赐予我最美好的恩赐。 | 诗意浪漫",
+            "愿你永远健康，永远美丽，永远幸福。 | 诗意浪漫",
+            "你的眼神，让我充满了勇气和力量。 | 诗意浪漫",
+            "此情不朽，爱你永恒，直到时间的尽头。 | 诗意浪漫",
+            "你的笑容，是我心中最温暖的阳光。 | 诗意浪漫",
+            "愿我们永远相守，永远相爱，永远幸福。 | 诗意浪漫",
+            "你的声音，是我心中最美妙的音乐。 | 诗意浪漫",
+            "此生有你，满足，永远感恩。 | 诗意浪漫",
+            "你的温柔，是我心中最美的画卷。 | 诗意浪漫",
+            "爱你，是我最深情的承诺，永不食言。 | 诗意浪漫",
+            "你的存在，让我的生活充满了欢笑和快乐。 | 诗意浪漫",
+            "愿你永远自由，永远洒脱，永远快乐。 | 诗意浪漫",
+            "你的眼神，让我心神荡漾，无法自拔。 | 诗意浪漫",
+            "此情不灭，爱你永恒，直到海枯石烂。 | 诗意浪漫",
+            "你的笑容，是我心中最美好的礼物。 | 诗意浪漫",
+            "愿我们永远相爱，永远甜蜜，永远幸福。 | 诗意浪漫",
+            "你的声音，是我心中最动听的声音。 | 诗意浪漫",
+            "此生有你，足矣，别无他求。 | 诗意浪漫",
+            "你的温柔，是我心中最美的风景。 | 诗意浪漫",
+            "爱你，是我最执著的追求，永不放弃。 | 诗意浪漫",
+            "你的存在，是我生命中最美的色彩。 | 诗意浪漫",
+            "愿你永远年轻，永远美丽，永远幸福。 | 诗意浪漫",
+            "你的眼神，让我心跳加速，无法控制。 | 诗意浪漫",
+            "此情不渝，爱你永恒，直到天涯海角。 | 诗意浪漫",
+            "你的笑容，是我心中永远的宝藏。 | 诗意浪漫",
+            "愿我们永远相守，永远相爱，永远幸福。 | 诗意浪漫",
+            "你的声音，是我心中最治愈的声音。 | 诗意浪漫",
+            "此生有你，满足，永远感恩。 | 诗意浪漫",
+            "你的温柔，是我心中最柔软的地方。 | 诗意浪漫",
+            "爱你，是我最真挚的告白，永不停止。 | 诗意浪漫",
+            "你的存在，是上天賜予我最珍貴的礼物。 | 诗意浪漫",
+            "愿你永远健康，永远美丽，永远年轻。",
+            "你的眼神，让我充满了勇气和力量。 | 诗意浪漫",
+            "此情不灭，爱你永恒，直到世界的尽头。",
+            "你的笑容，是我心中永远的阳光。 | 诗意浪漫",
+            "愿我们永遠相爱，永遠甜蜜，永遠幸福。",
+            "你的声音，是我心中最美妙的音乐。 | 诗意浪漫",
+            "此生有你，足矣，别无所求。 | 诗意浪漫",
+            "你的温柔，是我心中最柔软的地方。",
+            "爱你，是我最真挚的告白，永不停止。",
+            "你的存在，是上天賜予我最珍貴的礼物。 | 诗意浪漫",
+            "愿你永远幸福，永遠美满，永遠快樂。 | 诗意浪漫",
+            "你的眼神，让我心神荡漾，无法抗拒。",
+            "此情不渝，爱你永恒，直到天涯海角。 | 诗意浪漫",
+            "你的笑容，是我心中最美的风景线。",
+            "愿我们永遠相守，永遠相爱，永遠幸福。 | 诗意浪漫",
+            "你的声音，是我心中最美的诗篇。",
+            "此生有你，满足，永远感恩。",
+            "你的温柔，是我心中最美的画卷。",
+            "爱你，是我最长情的陪伴，永不离开。",
+            "你的存在，让我的生命充满了意义和价值。",
+            "愿你永远健康，永远美丽，永远年轻。",
+            "你的眼神，让我心跳加速，无法控制。",
+            "此情不灭，爱你永恒，直到海枯石烂。",
+            "你的笑容，是我心中最温暖的阳光。",
+            "愿我们永遠相爱，永遠甜蜜，永遠幸福。",
+            "你的声音，是我心中最美妙的音乐。",
+            "此生有你，幸運，永远珍惜。",
+            "你的温柔，是我心中最美的回忆。",
+            "爱你，是我最执著的追求，永不放弃。",
+            "你的存在，是我生命中最美的色彩。",
+            "愿你永远年轻，永远美丽，永远幸福。",
+            "你的眼神，让我心动不已，无法自拔。",
+            "此情不渝，爱你永恒，直到天涯海角。",
+            "你的笑容，是我心中永远的宝藏。",
+            "愿我们永遠相守，永遠相爱，永遠幸福。",
+            "你的声音，是我心中最治愈的声音。",
+            "此生有你，满足，永远感恩。",
+            "你的温柔，是我心中最柔软的地方。",
+            "爱你，是我最真挚的告白，永不停止。",
+            "你的存在，是上天賜予我最珍貴的礼物。",
+            "愿你永远健康，永远美丽，永远年轻。",
+            "你的眼神，让我充满了勇气和力量。",
+            "此情不灭，爱你永恒，直到世界的尽头。",
+            "你的笑容，是我心中永远的阳光。",
+            "愿我们永遠相爱，永遠甜蜜，永遠幸福。",
+            "你的声音，是我心中最美妙的音乐。",
+            "此生有你，足矣，别无所求。",
+            "你的温柔，是我心中最柔软的地方。",
+            "爱你，是我最真挚的告白，永不停止。",
+            "你的存在，是上天賜予我最珍貴的礼物。",
+            "愿你永遠幸福，永遠美满，永遠快樂。",
+            "你的眼神，让我心神荡漾，无法抗拒。",
+            "此情不渝，爱你永恒，直到天涯海角。",
+            "你的笑容，是我心中最美的风景线。",
+            "願我们永远相守，永远相爱，永远幸福。",
+            "你的声音，是我心中最美的诗篇。",
+            "此生有你，满足，永远感恩。",
+            "你的温柔，是我心中最美的画卷。",
+            "爱你，是我最长情的陪伴，永不离开。",
+            "你的存在，让我的生命充满了意义和价值。",
+            "愿你永远健康，永远美丽，永远年轻。",
+            "你的眼神，让我心跳加速，无法控制。",
+            "此情不灭，爱你永恒，直到海枯石烂。",
+            "你的笑容，是我心中最温暖的阳光。",
+            "愿我们永远相爱，永远甜蜜，永远幸福。",
+            "你的声音，是我心中最美妙的音乐。",
+            "此生有你，幸運，永远珍惜。",
+            "你的温柔，是我心中最美的回忆。",
+            "爱你，是我最执著的追求，永不放弃。",
+            "你的存在，是我生命中最美的色彩。",
+            "愿你永远年轻，永远美丽，永远幸福。",
+            "你的眼神，让我心动不已，无法自拔。",
+            "此情不渝，爱你永恒，直到天涯海角。",
+            "你的笑容，是我心中永远的宝藏。",
+            "愿我们永远相守，永远相爱，永远幸福。",
+            "你的声音，是我心中最治愈的声音。",
+            "此生有你，满足，永远感恩。",
+        ];
+
 
         // --- DOM Elements ---
         const generateBtn = document.getElementById('generateBtn');
         const loadingDots = document.getElementById('loadingDots');
         const generateBtnText = document.getElementById('generateBtnText');
-        const styleSelect = document.getElementById('styleSelect'); // NEW: Style Select DOM
+        const styleSelect = document.getElementById('styleSelect'); 
         const videoSelect = document.getElementById('videoSelect');
-        const customVideoLinkInput = document.getElementById('customVideoLinkInput'); // NEW: 自填連結輸入框
+        const customVideoLinkInput = document.getElementById('customVideoLinkInput'); 
         const resultsContainer = document.getElementById('resultsContainer');
         const initialMessage = document.getElementById('initialMessage');
-        const templatePreviewSummary = document.getElementById('templatePreviewSummary'); // 新增預覽摘要 DOM 引用
+        const templatePreviewSummary = document.getElementById('templatePreviewSummary'); 
         const personalIdInput = document.getElementById('personalIdInput');
         const crWatermarkCheckbox = document.getElementById('crWatermarkCheckbox'); 
 
@@ -490,12 +1083,10 @@
             videoPool = [];
             const select = document.getElementById('videoSelect');
             
-            // 遍歷所有 optgroup 和 option (除了第一個 "不添加影片" 和 "隨機" 選項)
             Array.from(select.children).forEach(group => {
                 if (group.tagName === 'OPTGROUP') {
                     Array.from(group.children).forEach(option => {
                         if (option.value && option.value !== 'RANDOM_ANY') {
-                            // 修正 tcn 為 t.cn
                              let value = option.value.replace(/tcn\//g, 't.cn/');
                             videoPool.push(value);
                         }
@@ -529,36 +1120,91 @@
          */
         function toSimplified(text) {
              // 簡化常用的繁體字
-             text = text.replace(/劉/g, '刘');
-             text = text.replace(/寧/g, '宁');
-             text = text.replace(/團/g, '团');
-             text = text.replace(/體/g, '体');
-             text = text.replace(/們/g, '们');
-             text = text.replace(/個/g, '个');
-             text = text.replace(/號/g, '号');
-             text = text.replace(/萬/g, '万');
-             text = text.replace(/發/g, '发');
-             text = text.replace(/語/g, '语');
-             text = text.replace(/從/g, '从');
-             text = text.replace(/對/g, '对');
-             text = text.replace(/這/g, '这');
-             text = text.replace(/邊/g, '边');
-             text = text.replace(/裡/g, '里');
-             text = text.replace(/訊/g, '讯');
-             text = text.replace(new RegExp('計劃', 'g'), '计划');
+             text = text.replace(/刘/g, '刘');
+             text = text.replace(/宁/g, '宁');
+             text = text.replace(/团/g, '团');
+             text = text.replace(/体/g, '体');
+             text = text.replace(/们/g, '们');
+             text = text.replace(/个/g, '个');
+             text = text.replace(/号/g, '号');
+             text = text.replace(/万/g, '万');
+             text = text.replace(/发/g, '发');
+             text = text.replace(/语/g, '语');
+             text = text.replace(/从/g, '从');
+             text = text.replace(/对/g, '对');
+             text = text.replace(/这/g, '这');
+             text = text.replace(/边/g, '边');
+             text = text.replace(/里/g, '里');
+             text = text.replace(/讯/g, '讯');
+             text = text.replace(new RegExp('计划', 'g'), '计划');
              // 確保「劉宇寧小貝」中的「劉宇寧」是簡體
-             text = text.replace(/劉宇寧/g, '刘宇宁');
-             text = text.replace(/叢生/g, '丛生');
-             text = text.replace(/衛視/g, '卫视');
-             text = text.replace(/視頻/g, '视频');
-             text = text.replace(/純甄/g, '纯甄'); // 確保簡體不會被重複簡化或損壞
-             text = text.replace(/劉宇寧/g, '刘宇宁'); // 再次確保劉宇寧簡化
+             text = text.replace(/刘宇宁/g, '刘宇宁');
+             text = text.replace(/丛生/g, '丛生');
+             text = text.replace(/卫视/g, '卫视');
+             text = text.replace(/视频/g, '视频');
+             text = text.replace(/纯甄/g, '纯甄'); // 確保簡體不會被重複簡化或損壞
+             text = text.replace(/刘宇宁/g, '刘宇宁'); // 再次確保劉宇寧簡化
 
              return text;
         }
 
 
-        // --- Utility Functions (Must be defined before usage) ---
+        // --- Utility Functions (cont.) ---
+
+        /**
+         * 複製到剪貼板
+         * @param {string} text - 要複製的文字
+         */
+        function copyToClipboard(text) {
+             const tempTextarea = document.createElement('textarea');
+             tempTextarea.style.position = 'fixed';
+             tempTextarea.style.opacity = '0';
+             tempTextarea.value = text; 
+             document.body.appendChild(tempTextarea);
+             
+             try {
+                tempTextarea.select();
+                tempTextarea.setSelectionRange(0, 99999); 
+                document.execCommand('copy');
+             } catch (err) {
+                 console.error('无法使用 execCommand 复制:', err);
+                 showToast('复制失败，请手动复制。', 'error');
+             } finally {
+                document.body.removeChild(tempTextarea);
+             }
+        }
+        
+        /**
+         * 渲染單一文案卡片
+         */
+        function renderCopyCard(content, index) {
+            const cardId = `card-${Date.now()}-${index}`;
+            const html = `
+                <div class="copy-card" id="${cardId}">
+                    <p class="text-sm text-gray-500 mb-2 font-bold">✨ 文案 #${index} - 基于模板 ${selectedTemplateId}</p>
+                    <pre class="whitespace-pre-wrap text-sm text-gray-800 bg-gray-50 p-3 rounded border border-gray-200 mb-3 max-h-48 overflow-y-auto">${toSimplified(content.trim())}</pre>
+                    <button class="w-full bg-orange-500 text-white hover:bg-orange-600 font-semibold py-2 px-4 rounded-xl transition-colors flex items-center justify-center" onclick="copyAndRemoveCard('${cardId}', this)">
+                        <i data-lucide="clipboard-check" class="w-4 h-4 mr-2"></i>
+                        复制完整文案 (并移除卡片)
+                    </button>
+                </div>
+            `;
+            resultsContainer.insertAdjacentHTML('beforeend', html);
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        /**
+         * 渲染錯誤卡片
+         */
+        function renderErrorCard(index) {
+             const html = `
+                <div class="copy-card bg-red-50 border-red-300">
+                    <p class="text-sm text-red-700 font-bold">❌ 文案 #${index} 生成失败</p>
+                    <p class="text-xs text-red-500 mt-1">请检查 AI 服务是否正常。</p>
+                </div>
+            `;
+            resultsContainer.insertAdjacentHTML('beforeend', html);
+        }
 
         /**
          * 顯示提示 (Toast)
@@ -602,70 +1248,62 @@
             let loadingSpan = btnElement.querySelector('.loading-spinner');
 
             if (!loadingSpan) {
-                // 如果 loadingSpan 不存在 (因為之前按鈕沒有，我們需要動態創建)
                 loadingSpan = document.createElement('span');
                 loadingSpan.className = 'loading-spinner';
                 loadingSpan.innerHTML = `
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
-                    AI 正在生成 ${count} 組文案...
+                    AI 正在生成 ${count} 组文案...
                 `;
                 btnElement.appendChild(loadingSpan);
             } else {
-                // 更新 loading 文本
-                 loadingSpan.textContent = `AI 正在生成 ${count} 組文案...`;
+                 loadingSpan.textContent = `AI 正在生成 ${count} 组文案...`;
             }
 
             btnElement.disabled = isLoading;
             
             if (isLoading) {
-                // 顯示 loading
                 textSpan.style.display = 'none';
                 loadingSpan.style.display = 'flex';
                 initialMessage.classList.add('hidden'); 
             } else {
-                // 顯示文字
                 textSpan.style.display = 'flex';
                 loadingSpan.style.display = 'none';
                 if (resultsContainer.childElementCount === 0) {
                      initialMessage.classList.remove('hidden');
-                     initialMessage.textContent = "所有文案已複製完畢！請重新生成批次。";
+                     initialMessage.textContent = "所有文案已复制完毕！请重新生成批次。";
                 } else {
                      initialMessage.classList.add('hidden');
                 }
             }
         }
+        
+        /**
+         * 儲存設定到 localStorage
+         */
+        function saveSettings() {
+             localStorage.setItem('lyn_fan_id', personalIdInput.value);
+             localStorage.setItem('lyn_cr_checked', crWatermarkCheckbox.checked);
+        }
 
         /**
-         * 複製到剪貼板
-         * @param {string} text - 要複製的文字
+         * 從 localStorage 載入設定
          */
-        function copyToClipboard(text) {
-             const tempTextarea = document.createElement('textarea');
-             tempTextarea.style.position = 'fixed';
-             tempTextarea.style.opacity = '0';
-             // 修正：確保簡體轉換後的內容被正確賦值
-             tempTextarea.value = text; 
-             document.body.appendChild(tempTextarea);
-             
-             // 嘗試選取和複製
-             try {
-                tempTextarea.select();
-                tempTextarea.setSelectionRange(0, 99999); // 適用於 iOS
-                document.execCommand('copy');
-                // 如果成功，不顯示錯誤 toast
-             } catch (err) {
-                 console.error('無法使用 execCommand 複製:', err);
-                 showToast('複製失敗，請手動複製。', 'error');
-             } finally {
-                document.body.removeChild(tempTextarea);
-             }
+        function loadSettings() {
+            const savedId = localStorage.getItem('lyn_fan_id');
+            const savedCrChecked = localStorage.getItem('lyn_cr_checked');
+
+            if (savedId !== null) {
+                personalIdInput.value = savedId;
+            }
+            if (savedCrChecked !== null) {
+                crWatermarkCheckbox.checked = savedCrChecked === 'true';
+            }
         }
 
         // --- Template Management Functions ---
-        // (已刪除不需要的模板編輯函式)
-
+        
         /**
          * 選擇頂部的模板按鈕 (設定當前要使用的模板 ID 並顯示預覽)
          */
@@ -682,7 +1320,7 @@
             const previewText = masterTemplates[selectedTemplateId].preview;
             templatePreviewSummary.textContent = previewText;
             
-            showToast(`已選擇 [模板 ${selectedTemplateId}]`, 'info');
+            showToast(`已选择 [模板 ${selectedTemplateId}]`, 'info');
         }
 
         /**
@@ -695,236 +1333,8 @@
             const previewText = masterTemplates[selectedTemplateId].preview;
             templatePreviewSummary.textContent = previewText;
 
-            showToast(`已選擇 [模板 ${selectedTemplateId}]`, 'info');
+            showToast(`已选择 [模板 ${selectedTemplateId}]`, 'info');
         }
-        
-        /**
-         * 儲存設定到 localStorage
-         */
-        function saveSettings() {
-             localStorage.setItem('lyn_fan_id', personalIdInput.value);
-             localStorage.setItem('lyn_cr_checked', crWatermarkCheckbox.checked);
-        }
-
-        /**
-         * 從 localStorage 載入設定
-         */
-        function loadSettings() {
-            const savedId = localStorage.getItem('lyn_fan_id');
-            const savedCrChecked = localStorage.getItem('lyn_cr_checked');
-
-            if (savedId !== null) {
-                personalIdInput.value = savedId;
-            }
-            if (savedCrChecked !== null) {
-                crWatermarkCheckbox.checked = savedCrChecked === 'true';
-            }
-        }
-        
-        // --- Core Generation Functions ---
-
-        /**
-         * 批次生成 AI 古風文案
-         * @param {number} count - 生成的文案數量 (1 或 5)
-         * @param {HTMLElement} btnElement - 被點擊的按鈕元素
-         */
-        async function generateMultiple(count, btnElement) {
-            setLoading(true, btnElement, count); 
-            
-            const NUM_CARDS = count;
-            resultsContainer.innerHTML = ''; // 清空舊結果
-            
-            const currentTemplateContent = masterTemplates[selectedTemplateId].content;
-            const videoAction = videoSelect.value.trim(); // 獲取預設影片選擇動作
-            const customVideoLink = customVideoLinkInput.value.trim(); // NEW: 獲取自填連結
-
-            let specificVideoLink = (videoAction && videoAction !== 'RANDOM_ANY') ? videoAction : '';
-            // 檢查 CR 浮水印狀態
-            const shouldAddCR = crWatermarkCheckbox.checked;
-
-            
-            if (!currentTemplateContent || !currentTemplateContent.includes(QUOTE_PLACEHOLDER)) {
-                setLoading(false, btnElement, count);
-                resultsContainer.innerHTML = `<p class="text-center text-red-500 pt-4">❌ 模板錯誤！請確保模板中有 [AI_QUOTE] 佔位符。</p>`;
-                return;
-            }
-
-
-            const quotePromises = [];
-            const selectedStyle = styleSelect.value;
-            // 將選擇的風格傳遞給 AI 函數
-            for (let i = 0; i < NUM_CARDS; i++) {
-                quotePromises.push(fetchAiQuote(selectedStyle)); 
-            }
-
-            const results = await Promise.all(quotePromises);
-            
-            results.forEach((generatedQuote, index) => {
-                let finalVideoLink = '';
-
-                // 優先級邏輯：1. 自填連結 2. 隨機 3. 指定預設
-                if (customVideoLink) {
-                    finalVideoLink = customVideoLink;
-                } else if (videoAction === 'RANDOM_ANY') {
-                    finalVideoLink = getRandomVideoLink(); 
-                } else if (videoAction) {
-                    finalVideoLink = videoAction; 
-                }
-                
-                if (generatedQuote) {
-                    // 隨機選擇 Emoji 前綴
-                    const randomPrefix = getRandomEmojiPrefix();
-                    const aiQuoteWithSymbols = randomPrefix + generatedQuote + QUOTE_SUFFIX;
-                    
-                    // 從這裡開始，我們處理最終文案結構
-                    let finalCopy = currentTemplateContent.replace(QUOTE_PLACEHOLDER, aiQuoteWithSymbols);
-                    
-                    // 處理選填影片連結和最終換行
-                    if (finalVideoLink) {
-                        // 在整個模板內容的末尾加上 \n\n 和 finalVideoLink
-                        finalCopy += '\n\n' + finalVideoLink; // 確保有空白行
-                    }
-
-                    // 添加 CR 浮水印
-                    if (shouldAddCR) {
-                        finalCopy += CR_TEXT; 
-                    }
-                    
-                    renderCopyCard(finalCopy.trim(), index + 1);
-
-                } else {
-                    renderErrorCard(index + 1);
-                }
-            });
-
-            // 清空自填連結輸入框
-            customVideoLinkInput.value = '';
-            
-            setLoading(false, btnElement, count);
-            const successCount = results.filter(r => r !== null).length;
-            if (successCount === 0) {
-                 showToast(`AI 請求失敗，請檢查金鑰或網路。`, 'error');
-            } else {
-                showToast(`成功生成 ${successCount} 組文案！`, 'success');
-            }
-        }
-
-        /**
-         * 呼叫 AI API 獲取單一古風金句 (保證解析，不拒絕)
-         */
-        async function fetchAiQuote(selectedStyle) {
-            // 返回一個 Promise，確保它只解析（resolve），不拒絕（reject）
-            return new Promise(async (resolve) => {
-                // 這裡使用通用的 systemPrompt，並將風格要求傳入 userQuery
-                const systemPrompt = "你是一位專精於不同風格寫作的頂級追星文案寫手。你的任務是嚴格根據提供的風格要求，為明星撰寫**一條**長度在 15 到 25 個漢字之間、富有感染力且適合社群媒體分享的句子。請勿加入任何額外的解釋、標點符號（除了必要的逗號/句號）或表情符號，只返回單一的句子。";
-                
-                const userQuery = `請為明星「${IDOL_NAME}」撰寫一條「${selectedStyle}」風格的追星讚美文案。`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: userQuery }] }],
-                    systemInstruction: { parts: [{ text: systemPrompt }] },
-                };
-
-                const MAX_RETRIES = 3;
-                for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
-                    try {
-                        const response = await fetch(`${API_URL_BASE}?key=${apiKey}`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (!response.ok) {
-                            if (response.status === 429 && attempt < MAX_RETRIES - 1) {
-                                // 指數退避 for 429
-                                const delay = Math.pow(2, attempt) * 1000 + Math.random() * 500;
-                                await new Promise(r => setTimeout(r, delay));
-                                continue; 
-                            }
-                            // NEW: 在部署環境中，如果 API Key 無效或網路錯誤，將會執行到這裡，返回 null 避免崩潰
-                            return resolve(null); 
-                        }
-
-                        const result = await response.json();
-                        const generatedQuote = result.candidates?.[0]?.content?.parts?.[0]?.text;
-                        
-                        if (generatedQuote) {
-                            resolve(generatedQuote.trim().replace(/^['"“「](.*)['"”」]$/, '$1'));
-                            return; 
-                        }
-                    } catch (error) {
-                        console.error(`AI 創作錯誤 (嘗試 ${attempt + 1}):`, error);
-                         if (attempt < MAX_RETRIES - 1) {
-                            const delay = Math.pow(2, attempt) * 1000 + Math.random() * 500;
-                            await new Promise(r => setTimeout(r, delay));
-                            continue;
-                        }
-                    }
-                }
-                resolve(null);
-            });
-        }
-
-        /**
-         * 渲染單一文案卡片
-         */
-        function renderCopyCard(content, index) {
-            const cardId = `card-${Date.now()}-${index}`;
-            const html = `
-                <div class="copy-card" id="${cardId}">
-                    <p class="text-sm text-gray-500 mb-2 font-bold">✨ 文案 #${index} - 基於模板 ${selectedTemplateId}</p>
-                    <pre class="whitespace-pre-wrap text-sm text-gray-800 bg-gray-50 p-3 rounded border border-gray-200 mb-3 max-h-48 overflow-y-auto">${toSimplified(content.trim())}</pre>
-                    <button class="w-full bg-orange-500 text-white hover:bg-orange-600 font-semibold py-2 px-4 rounded-xl transition-colors flex items-center justify-center" onclick="copyAndRemoveCard('${cardId}', this)">
-                        <i data-lucide="clipboard-check" class="w-4 h-4 mr-2"></i>
-                        複製完整文案 (並移除卡片)
-                    </button>
-                </div>
-            `;
-            resultsContainer.insertAdjacentHTML('beforeend', html);
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
-
-        /**
-         * 渲染錯誤卡片
-         */
-        function renderErrorCard(index) {
-             const html = `
-                <div class="copy-card bg-red-50 border-red-300">
-                    <p class="text-sm text-red-700 font-bold">❌ 文案 #${index} 生成失敗</p>
-                    <p class="text-xs text-red-500 mt-1">請檢查 AI 服務是否正常。</p>
-                </div>
-            `;
-            resultsContainer.insertAdjacentHTML('beforeend', html);
-        }
-
-        /**
-         * 複製內容並移除卡片
-         */
-        function copyAndRemoveCard(cardId, button) {
-            const card = document.getElementById(cardId);
-            const textToCopy = card.querySelector('pre').textContent;
-            
-            // 複製內容 (textToCopy 已經是簡體)
-            copyToClipboard(textToCopy);
-            
-            // 移除卡片
-            card.classList.add('fade-out');
-            button.disabled = true;
-            setTimeout(() => {
-                card.remove();
-                // 檢查是否所有卡片都已用完
-                if (resultsContainer.childElementCount === 0) {
-                     initialMessage.classList.remove('hidden');
-                     initialMessage.textContent = "所有文案已複製完畢！請重新生成批次。";
-                }
-            }, 500); 
-
-            // 提示訊息
-            showToast('✅ 完整文案已複製！', 'success');
-        }
-
-
-        // --- Other Functions ---
 
         /**
          * 複製評論模板 (已修改為結合個人 ID)
@@ -933,7 +1343,7 @@
             const personalId = personalIdInput.value.trim();
             
             if (!personalId) {
-                showToast('請輸入您的個人 ID！', 'warning');
+                showToast('请输入您的个人 ID！', 'warning');
                 return;
             }
             
@@ -942,31 +1352,113 @@
             const finalCommentSimplified = toSimplified(combinedComment);
 
             copyToClipboard(finalCommentSimplified); // 複製簡體版
-            showToast('評論模板已複製！', 'success');
+            showToast('评论模板已复制！', 'success');
         }
+
+
+        // --- Core Generation Functions ---
 
         /**
-         * 儲存設定到 localStorage
+         * 靜態文案獲取 (模擬 AI 輸出，但從本地文案庫獲取)
          */
-        function saveSettings() {
-             localStorage.setItem('lyn_fan_id', personalIdInput.value);
-             localStorage.setItem('lyn_cr_checked', crWatermarkCheckbox.checked);
+        function getStaticQuote(selectedStyle) {
+            // 根據選擇的風格篩選文案
+            const filteredPool = STATIC_COPY_POOL.filter(copy => {
+                // 檢查文案是否包含對應的風格標籤
+                if (selectedStyle === '古风优雅' && copy.includes('古风优雅')) return true;
+                if (selectedStyle === '现代热情' && copy.includes('现代热情')) return true;
+                if (selectedStyle === '青春活力' && copy.includes('青春活力')) return true;
+                if (selectedStyle === '诗意浪漫' && copy.includes('诗意浪漫')) return true;
+                return false;
+            }).map(copy => copy.split(' | ')[0]); // 移除風格標籤
+
+            if (filteredPool.length === 0) {
+                 // 如果風格庫是空的，則使用全部庫並返回一個
+                 return STATIC_COPY_POOL[Math.floor(Math.random() * STATIC_COPY_POOL.length)].split(' | ')[0];
+            }
+            
+            // 實作已使用文案追蹤，防止重複
+            const availableQuotes = filteredPool.filter(quote => !usedStaticCopy.has(quote));
+
+            if (availableQuotes.length === 0) {
+                usedStaticCopy.clear();
+                return getStaticQuote(selectedStyle); // 重新呼叫以獲取新文案
+            }
+
+            const randomIndex = Math.floor(Math.random() * availableQuotes.length);
+            const quote = availableQuotes[randomIndex];
+            usedStaticCopy.add(quote); // 標記為已使用
+            return quote;
         }
+
 
         /**
-         * 從 localStorage 載入設定
+         * 批次生成文案 (使用靜態庫)
          */
-        function loadSettings() {
-            const savedId = localStorage.getItem('lyn_fan_id');
-            const savedCrChecked = localStorage.getItem('lyn_cr_checked');
+        async function generateMultiple(count, btnElement) {
+            setLoading(true, btnElement, count); 
+            
+            const NUM_CARDS = count;
+            resultsContainer.innerHTML = ''; // 清空舊結果
+            
+            const currentTemplateContent = masterTemplates[selectedTemplateId].content;
+            const videoAction = videoSelect.value.trim(); 
+            const customVideoLink = customVideoLinkInput.value.trim(); 
+            const selectedStyle = styleSelect.value;
+            const shouldAddCR = crWatermarkCheckbox.checked;
 
-            if (savedId !== null) {
-                personalIdInput.value = savedId;
+            
+            if (!currentTemplateContent || !currentTemplateContent.includes(QUOTE_PLACEHOLDER)) {
+                setLoading(false, btnElement, count);
+                resultsContainer.innerHTML = `<p class="text-center text-red-500 pt-4">❌ 模板错误！请确保模板中有 [AI_QUOTE] 占位符。</p>`;
+                return;
             }
-            if (savedCrChecked !== null) {
-                crWatermarkCheckbox.checked = savedCrChecked === 'true';
+
+
+            const generatedResults = [];
+            for (let i = 0; i < NUM_CARDS; i++) {
+                // 獲取靜態文案
+                generatedResults.push(getStaticQuote(selectedStyle));
             }
+            
+            generatedResults.forEach((generatedQuote, index) => {
+                let finalVideoLink = '';
+
+                // 優先級邏輯：1. 自填連結 2. 隨機 3. 指定預設
+                if (customVideoLink) {
+                    finalVideoLink = customVideoLink;
+                } else if (videoAction === 'RANDOM_ANY') {
+                    finalVideoLink = getRandomVideoLink(); 
+                } else if (videoAction && videoAction !== '') {
+                    finalVideoLink = videoAction; 
+                }
+                
+                if (generatedQuote) {
+                    const randomPrefix = getRandomEmojiPrefix();
+                    const aiQuoteWithSymbols = randomPrefix + generatedQuote + QUOTE_SUFFIX;
+                    
+                    let finalCopy = currentTemplateContent.replace(QUOTE_PLACEHOLDER, aiQuoteWithSymbols);
+                    
+                    if (finalVideoLink) {
+                        finalCopy += '\n\n' + finalVideoLink; 
+                    }
+
+                    if (shouldAddCR) {
+                        finalCopy += CR_TEXT; 
+                    }
+                    
+                    renderCopyCard(finalCopy.trim(), index + 1); 
+                } else {
+                    renderErrorCard(index + 1);
+                }
+            });
+
+            customVideoLinkInput.value = '';
+            
+            setLoading(false, btnElement, count);
+            showToast(`成功生成 ${NUM_CARDS} 组文案！`, 'success');
         }
+
 
         // --- Initialization ---
 
