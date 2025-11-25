@@ -183,8 +183,8 @@
                             <!-- 恢復下拉選單 --><select id="templateSelectDropdown" onchange="selectTemplateDropdown(this.value)" 
                                     class="w-full p-3 border border-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-500 transition-colors bg-white shadow-sm font-semibold">
                                 <!-- 模板選項，data-preview 包含摘要資訊 --><option value="1" data-preview="OLAY 代言, 2025巡演, 摩登兄弟超话 (含3连结)">模板 1 (OLAY/巡演)</option>
-                                <option value="2" data-preview="音乐缘计划, 闲鱼代言, 摩登兄弟超话 (含3连结)">模板 2 (音乐/闲鱼)</option>
-                                <option value="3" data-preview="新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话 (含3连结)">模板 3 (新歌/榜单)</option>
+                                <option value="2" data-preview="音乐缘计划, 闲鱼代言, 摩登兄弟超话 ">模板 2 (音乐/闲鱼)</option>
+                                <option value="3" data-preview="新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话 ">模板 3 (新歌/榜单)</option>
                             </select>
                             
                             <!-- 模板內容預覽區塊 --><div id="templatePreviewSummary" class="text-sm mt-3 p-3 bg-yellow-100 text-yellow-800 rounded-lg border border-yellow-200 font-medium transition-opacity duration-300">
@@ -447,17 +447,17 @@
             1: {
                 // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及
                 content: `#OLAY身体护理品牌全线代言人刘宇宁# | #刘宇宁的2025巡演# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
-                preview: 'OLAY 代言, 2025巡演, 摩登兄弟超话 (含3连结)'
+                preview: 'OLAY 代言, 2025巡演, 摩登兄弟超话'
             },
             2: {
                 // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (所有模板都必须包含固定链接)
-                content: `#刘宇宁音乐缘计划# | #神奇的闲鱼代言人刘宇宁# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
-                preview: '音乐缘计划, 闲鱼代言, 摩登兄弟超话 (含3连结)'
+                content: `#刘宇宁万两MV# | #神奇的闲鱼代言人刘宇宁# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n${MENTION_BLOCK}`,
+                preview: '音乐缘计划, 闲鱼代言, 摩登兄弟超话'
             },
             3: {
                 // 結構: Hashtag -> AI -> 空行 -> 固定連結 -> 空行 -> 提及 (以新歌主题为 Hashtag)
-                content: `#刘宇宁新歌若没有你# | #腾讯音乐由你榜# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n@摩登兄弟刘宇宁 刘宇宁小贝｜刘宇宁玫瑰丛生 摩登兄弟刘宇宁｜刘宇宁｜宁哥｜lyn`,
-                preview: '新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话 (含3连结)'
+                content: `刘宇宁新歌若没有你# | #腾讯音乐由你榜# | #摩登兄弟[超话]#\n\n${QUOTE_PLACEHOLDER}\n\n${FIXED_LINKS}\n\n@摩登兄弟刘宇宁 刘宇宁小贝｜刘宇宁玫瑰丛生 摩登兄弟刘宇宁｜刘宇宁｜宁哥｜lyn`,
+                preview: '新歌榜单, 腾讯音乐由你榜, 摩登兄弟超话'
             }
         };
         
@@ -1535,3 +1535,4 @@
     </script>
 </body>
 </html>
+
